@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="scriptAuth.js"></script>
-    <script src="scriptDataBase.js"></script>
     
     
     <style>
@@ -83,6 +81,8 @@
 </head>
 
 <body>
+    <script type="module" src="scriptAuth.js"></script>
+    <script type="module" src="scriptDataBase.js"></script>
     <div class="container">
         <h1>INSCRIPCIÓN PORTAL PROCAMPO</h1>
         <h3> <center>REGISTRO DE CLIENTES</center></h3>
@@ -111,7 +111,7 @@
             </div>
             <div class="row">
                 <label for="apellidoPaterno">Apellido Paterno</label>
-                <input type="text" id="apellidoPaterno" name="apellidoPaterno" required>
+                <input type="text" id="apellidoPaterno" name="apellidoPaterno">
             </div>
             <div class="row">
                 <label for="apellidoMaterno">Apellido Materno</label>

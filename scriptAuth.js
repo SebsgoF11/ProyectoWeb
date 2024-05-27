@@ -30,11 +30,6 @@ const registroForm = document.getElementById("registroForm");
 const inputtipoDocumento = document.getElementById("tipoDocumento");
 const inputnumeroDocumento = document.getElementById("numeroDocumento");
 const inputnombres = document.getElementById("nombres");
-const inputapellidoPaterno = document.getElementById("apellidoPaterno");
-const inputapellidoMaterno = document.getElementById("apellidoMaterno");
-const inputcorreoElectronico = document.getElementById("correoElectronico");
-const inputcontrasena = document.getElementById("contrasena");
-const inputconfirmarContrasena = document.getElementById("confirmarContrasena");
 
 registroForm.addEventListener("submit", async function (event) {
     event.preventDefault();
@@ -42,22 +37,12 @@ registroForm.addEventListener("submit", async function (event) {
     const tipoDocumento = inputtipoDocumento.value;
     const numeroDocumento = inputnumeroDocumento.value;
     const nombres = inputnombres.value;
-    const apellidoPaterno = inputapellidoPaterno;
-    const apellidoMaterno = inputapellidoMaterno;
-    const correoElectronico = inputcorreoElectronico;
-    const contrasena = inputcontrasena;
-    const confirmarContrasena = inputconfirmarContrasena;
 
     try {
         await addDoc(collection(Firestore, "DatosClientes"), {
             TipodeDocumento : tipoDocumento,
             NumerodeDocumento : numeroDocumento,
             Nombres : nombres,
-            ApellidoPaterno : apellidoPaterno,
-            ApellidoMaterno : apellidoMaterno,
-            Email : correoElectronico,
-            Contraseña : contrasena,
-            ConfirmarContrasena : confirmarContrasena
         });
     }   catch (error) {
         console.error("Error al agregar datos", error);
