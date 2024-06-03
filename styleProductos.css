@@ -493,25 +493,21 @@ section {
 }
 
 .down-arrow {
-   vertical-align: middle;
-}
-
-.down-arrow {
    position: absolute;
    top: 85%;
    right: 11%;
 }
-
 .down i {
    font-size: 30px;
    color: #2c2c2c;
    border: 2px solid #2c2c2c;
    border-radius: 50px;
    padding: 12px 12px;
+   cursor: pointer;
 }
 
 .down i:hover {
-   background-color: #e01313;
+   background-color: #39b157;
    color: #fff;
    transition: all .42s ease;
 }
@@ -759,3 +755,165 @@ button.active {
    text-align: center;
 }
 
+
+/* busqueda */
+.container_bus {
+   position: absolute;
+   left: 87%;
+   top: 50%; /* para bajarlo */
+   transform: translate(-50%, -50%);
+   padding: 10px;
+}
+
+input {
+   outline: none;
+   box-sizing: border-box;
+   width: 0; 
+   height: 40px; /* altura reducida */
+   padding: 0 10px; /* padding reducido */
+   color: #000;
+   border-radius: 25px; /* borde reducido acorde a la nueva altura */
+   font-size: 16px; /* tamaño de fuente reducido */
+   border: 1px solid #e77630;
+   transition: all .7s ease;
+}
+
+::placeholder {
+   color: grey;
+}
+
+.btn {
+   position: absolute;
+   right: 0;
+   top: 0;
+   width: 60px; /* ancho reducido */
+   height: 60px; /* altura reducida */
+   background: #e77630;
+   line-height: 60px; /* ajuste de altura del círculo */
+   border-radius: 50%; /* mantiene el círculo */
+   text-align: center;
+   cursor: pointer;
+   transition: .5s;
+}
+
+.btn i {
+   font-size: 16px; /* tamaño del icono reducido */
+   color: white;
+   line-height: 60px; /* ajusta la altura del icono para que esté centrado verticalmente */
+   transition: all .7s ease;
+}
+
+.container_bus:hover input {
+   width: 250px; /* ancho de expansión reducido */
+}
+
+.container_bus:hover i {
+   transform: rotate(-360deg);
+}
+
+.btn:hover {
+   background-color: #e77630;
+}
+
+
+
+
+
+
+
+
+/*........es del otro busqueda.........*/
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   border: none;
+   outline: none;
+   font-family: "Poppins", sans-serif;
+ }
+ body {
+   background-color: #f5f8ff;
+ }
+ .wrapper {
+   width: 95%;
+   margin: 0 auto;
+ }
+ #search-container {
+   margin: 1em 0;
+ }
+ #search-container input {
+   background-color: transparent;
+   width: 40%;
+   border-bottom: 2px solid #110f29;
+   padding: 1em 0.3em;
+ }
+ #search-container input:focus {
+   border-bottom-color: #6759ff;
+ }
+ #search-container button {
+   padding: 1em 2em;
+   margin-left: 1em;
+   background-color: #6759ff;
+   color: #ffffff;
+   border-radius: 5px;
+   margin-top: 0.5em;
+ }
+ .button-value {
+   border: 2px solid #6759ff;
+   padding: 1em 2.2em;
+   border-radius: 3em;
+   background-color: transparent;
+   color: #6759ff;
+   cursor: pointer;
+ }
+ .active {
+   background-color: #6759ff;
+   color: #ffffff;
+ }
+ #products {
+   display: grid;
+   grid-template-columns: auto auto auto;
+   grid-column-gap: 1.5em;
+   padding: 2em 0;
+ }
+ .card {
+   background-color: #ffffff;
+   max-width: 18em;
+   margin-top: 1em;
+   padding: 1em;
+   border-radius: 5px;
+   box-shadow: 1em 2em 2.5em rgba(1, 2, 68, 0.08);
+ }
+ .image-container {
+   text-align: center;
+ }
+ img {
+   max-width: 100%;
+   object-fit: contain;
+   height: 15em;
+ }
+ .container {
+   padding-top: 1em;
+   color: #110f29;
+ }
+ .container h5 {
+   font-weight: 500;
+ }
+ .hide {
+   display: none;
+ }
+ @media screen and (max-width: 720px) {
+   img {
+     max-width: 100%;
+     object-fit: contain;
+     height: 10em;
+   }
+   .card {
+     max-width: 10em;
+     margin-top: 1em;
+   }
+   #products {
+     grid-template-columns: auto auto;
+     grid-column-gap: 1em;
+   }
+ }

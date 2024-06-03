@@ -187,3 +187,22 @@ function setActive(button, targetContainer) {
     document.querySelector('.' + targetContainer).style.display = 'block';
   }
 } 
+
+/*   flecha      */
+document.getElementById('arrow').addEventListener('click', function(event) {
+  event.preventDefault();  // Prevent the default anchor behavior
+
+  // Get the target element
+  const target = document.getElementById('trending');
+
+  // Calculate the top position of the target element
+  const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+
+  // Animate the arrow's movement to the target position
+  window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+  });
+});
+
+//-------------------------------------
