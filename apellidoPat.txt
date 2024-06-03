@@ -11,7 +11,7 @@ const inputconfirmarContrasena = document.getElementById("confirmarContrasena");
     const confirmarContrasena = inputconfirmarContrasena;
 
     ApellidoPaterno : apellidoPaterno,
-                ApellidoMaterno : apellidoMaterno,
-            Email : correoElectronico,
-            Contraseña : contrasena,
-            ConfirmarContrasena : confirmarContrasena
+    ApellidoMaterno : apellidoMaterno,
+    Email : correoElectronico,
+    Contraseña : contrasena,
+    ConfirmarContrasena : confirmarContrasena

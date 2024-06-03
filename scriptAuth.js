@@ -8,14 +8,14 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.1/firebas
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyC9-0wfVwduQSZW0LnytRLqzcZiUcFiYe4",
-  authDomain: "procampoweb-3bf5a.firebaseapp.com",
-  databaseURL: "https://procampoweb-3bf5a-default-rtdb.firebaseio.com",
-  projectId: "procampoweb-3bf5a",
-  storageBucket: "procampoweb-3bf5a.appspot.com",
-  messagingSenderId: "163347514345",
-  appId: "1:163347514345:web:50825a06872e8bd2fa8178",
-  measurementId: "G-HEQXXD58ZZ"
+    apiKey: "AIzaSyC9-0wfVwduQSZW0LnytRLqzcZiUcFiYe4",
+    authDomain: "procampoweb-3bf5a.firebaseapp.com",
+    databaseURL: "https://procampoweb-3bf5a-default-rtdb.firebaseio.com",
+    projectId: "procampoweb-3bf5a",
+    storageBucket: "procampoweb-3bf5a.appspot.com",
+    messagingSenderId: "163347514345",
+    appId: "1:163347514345:web:50825a06872e8bd2fa8178",
+    measurementId: "G-HEQXXD58ZZ"
 };
 
 // Initialize Firebase
@@ -58,8 +58,9 @@ registroForm.addEventListener("submit", async function (event) {
             Email : correoElectronico,
             Contraseña : contrasena,
             ConfirmarContrasena : confirmarContrasena
+
         });
-    }   catch (error) {
+    } catch (error) {
         console.error("Error al agregar datos", error);
     }
 });
