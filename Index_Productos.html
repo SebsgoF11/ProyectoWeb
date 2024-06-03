@@ -12,6 +12,7 @@
    <!-- custom css file link  -->
    <link rel="stylesheet" href="styleProductos.css">
 
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,16 +38,27 @@
          <li><a href="Index_Accesos.html" style="color: black; font-weight: bold;">ACCESOS</a></li>
       </ul>
 
-      <div class="nav-icon">
-         <a href="#"><i class='bx bx-search'></i></a>
+      <div class="container_bus">
+         <input type="text" id="searchInput" placeholder="Buscar">
+         <div class="btn" id="searchBtn">
+             <i class="fa fa-search"></i>
+         </div>
+     </div>
+     
+     <div class="nav-icon">
          <a href="#"><i class='bx bx-user'></i></a>
          <a href="#"><i class='bx bx-cart'></i></a>
-         <div class="bx bx-menu" id="menu_icon"></div>
-      </div>
+         <div class="menu-icon bx bx-menu" id="menu_icon"></div>
+     </div>
+
    </header>  
      
    <section class="main-home">
       <div class="main-text">
+         <br>
+         <br>
+         <br>
+         <br>
          <h5>¡Descubre lo Mejor de Procampo!</h5>
          <h1>¡Exclusiva Venta de los mejores<br> Productos Procampo!</h1>
          <p>¡Sumérgete en la Excelencia y Calidad!</p>
@@ -55,13 +67,28 @@
       <div class="down-arrow">
          <a href="#trending" class="down"><i class='bx bx-down-arrow-alt'></i></a>
       </div>
+      <div id="trending" style="margin-top: 35vh; padding: 20px;">
+         
+     </div>
    </section>
+
    <!--para botones de categoria-->
+   
 
    <div class="container-button">
       
       <p><h1>LOS DIFERENTES PRODUCTOS QUE TENEMOS PARA TI</h1></p>
-      
+
+      <div class="wrapper">
+         <div id="search-container">
+           <input
+             type="search"
+             id="search-input"
+             placeholder="  Buscar...."
+           />
+           <button id="search">Search</button>
+         </div>
+  
       <div class="filter_buttons">
          <button onclick="setActive(this, 'all')">MOSTRAR TODAS LAS CATEGORIAS</button>
          <button onclick="setActive(this, 'container')">AGROQUÍMICOS</button>
@@ -72,7 +99,7 @@
          <button onclick="setActive(this, 'container_6')">FERTILIZANTES FOLIARES</button>
       </div>
    </div>
-
+   <div id="products"></div>
 
    <!-- primera categoria  -->
    <div class="container">
@@ -828,7 +855,7 @@
             <i class="fas fa-star-half-alt"></i>
             <span>( 250 )</span>
          </div>
-         <p>Fertilizante líquido orgánico-mineral con acción bioestimulante debido a su alto nivel de aminoácidos.</p>
+         <p>Fertilizante líquido orgánico-mineral con acción bioestimulante.</p>
          <div class="price">$18.00</div>
          <div class="buttons">
             <a href="#" class="buy">buy now</a>
@@ -933,7 +960,7 @@
             <i class="fas fa-star-half-alt"></i>
             <span>( 250 )</span>
          </div>
-         <p>Fertilizante que contiene hierro (Fe) quelatado con EDDHA, en la que predomina la isomería orto-orto,
+         <p>Fertilizante que contiene hierro con EDDHA y
             formulado para ser aplicado en suelos de pH alto.</p>
          <div class="price">$25.00</div>
          <div class="buttons">
@@ -993,8 +1020,8 @@
             <i class="fas fa-star-half-alt"></i>
             <span>( 250 )</span>
          </div>
-         <p>Coadyuvante, No-Iónico, Surfactante, Humectante Dispersante, Acelerador de Penetración, Emulsificante,
-            Controlador de Espuma e Indicador para pH Alcalinos.</p>
+         <p>Coadyuvante, Surfactante, Humectante Dispersante, Acelerador de Penetración,
+            Controlador de Espuma.</p>
          <div class="price">$18.00</div>
          <div class="buttons">
             <a href="#" class="buy">buy now</a>
@@ -1013,8 +1040,7 @@
             <i class="fas fa-star-half-alt"></i>
             <span>( 250 )</span>
          </div>
-         <p>Polvo soluble para aplicación foliar, o sistemas de irrigación. Fertilizante foliar de alta concentración en
-            fósforo y potasio.</p>
+         <p>Fertilizante foliar de alta concentración en fósforo y potasio.</p>
          <div class="price">$18.00</div>
          <div class="buttons">
             <a href="#" class="buy">buy now</a>
@@ -1153,7 +1179,7 @@
             <i class="fas fa-star-half-alt"></i>
             <span>( 250 )</span>
          </div>
-         <p>Fertilizante líquido orgánico-mineral con acción bioestimulante debido a su alto nivel de aminoácidos.</p>
+         <p>Fertilizante líquido orgánico-mineral con acción bioestimulante por aminoácidos.</p>
          <div class="price">$58.00</div>
          <div class="buttons">
             <a href="#" class="buy">buy now</a>
