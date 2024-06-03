@@ -12,7 +12,6 @@
    <!-- custom css file link  -->
    <link rel="stylesheet" href="styleProductos.css">
 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,33 +25,61 @@
    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Página</title>
+    <link rel="stylesheet" href="estilos.css"> <!-- Asegúrate de enlazar tu archivo CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css">
+</head>
 <body>
-   <!--para la parte del menu-->
-   <header>
-      <a href="#" class="logo"><img src="imagenes/logo1.png" alt="Logo"></a>
-      <ul class="navmenu">
-         <li><a href="Index_Inicio.html" style="color: black; font-weight: bold;">INICIO</a></li>
-         <li><a href="Index_Nosotros.html" style="color: black; font-weight: bold;">NOSOTROS</a></li>
-         <li><a href="Index_Productos.html" style="color: black; font-weight: bold;">PRODUCTOS</a></li>
-         <li><a href="Index_Novedades.html" style="color: black; font-weight: bold;">NOVEDADES</a></li>
-         <li><a href="Index_Accesos.html" style="color: black; font-weight: bold;">ACCESOS</a></li>
-      </ul>
+    <!--para la parte del menu-->
+    <header>
+        <a href="#" class="logo"><img src="imagenes/logo1.png" alt="Logo"></a>
+        <ul class="navmenu">
+            <li><a href="Index_Inicio.html" style="color: black; font-weight: bold;">INICIO</a></li>
+            <li><a href="Index_Nosotros.html" style="color: black; font-weight: bold;">NOSOTROS</a></li>
+            <li><a href="Index_Productos.html" style="color: black; font-weight: bold;">PRODUCTOS</a></li>
+            <li><a href="Index_Novedades.html" style="color: black; font-weight: bold;">NOVEDADES</a></li>
+            <li><a href="Index_Accesos.html" style="color: black; font-weight: bold;">ACCESOS</a></li>
+        </ul>
 
-      <div class="container_bus">
-         <input type="text" id="searchInput" placeholder="Buscar">
-         <div class="btn" id="searchBtn">
-             <i class="fa fa-search"></i>
+        <div class="container_bus">
+            <input type="text" id="searchInput" placeholder="Buscar">
+            <div class="btn" id="searchBtn">
+                <i class="fa fa-search"></i>
+            </div>
+        </div>
+        
+        <div class="nav-icon">
+         <i class="bx bx-user"></i>
+        </div>
+      <div class="nav-icon">
+         <i class="bx bx-cart"></i>
          </div>
-     </div>
-     
-     <div class="nav-icon">
-         <a href="#"><i class='bx bx-user'></i></a>
-         <a href="#"><i class='bx bx-cart'></i></a>
-         <div class="menu-icon bx bx-menu" id="menu_icon"></div>
-     </div>
+    
+        <div class="capa"></div>
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu" class="menu-icon">☰</label>
+        <div class="container-menu">
+            <div class="cont-menu">
+                <label for="btn-menu">✖️</label>
+                <nav>
+                    <a href="#">Portafolio</a>
+                    <a href="#">Servicios</a>
+                    <a href="#">Suscribirse</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Youtube</a>
+                    <a href="#">Instagram</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-   </header>  
-     
    <section class="main-home">
       <div class="main-text">
          <br>
@@ -74,7 +101,6 @@
 
    <!--para botones de categoria-->
    
-
    <div class="container-button">
       
       <p><h1>LOS DIFERENTES PRODUCTOS QUE TENEMOS PARA TI</h1></p>
@@ -99,9 +125,9 @@
          <button onclick="setActive(this, 'container_6')">FERTILIZANTES FOLIARES</button>
       </div>
    </div>
-   <div id="products"></div>
 
    <!-- primera categoria  -->
+  
    <div class="container">
       <h3 class="title">Agroquímicos</h3>
       <div class="products-container">
@@ -1194,89 +1220,81 @@
    <br>
    <br>
 
-   <!-- contactos -->
+  <!-- contactos -->
+  <footer class="footer">
+   <div class="container">
+      <h1>PROCAMPO</h1>
+      <div class="footer__button--market">
+         <a class="cmp-button" href="https://maps.app.goo.gl/FJ15zhTXwpipxdT29" target="_blank">
+            <i class="bx bxs-map"></i>
+            <span class="cmp-button__text">Perú</span>
+         </a>
+      </div>
 
-   <footer class="footer">
-      <div class="container">
-         <h1>PROCAMPO</h1>
-         <div class="footer__button--market">
-            <a class="cmp-button" href="https://maps.app.goo.gl/FJ15zhTXwpipxdT29" target="_blank">
-               <i class="bx bxs-map"></i>
-               <span class="cmp-button__text">Perú</span>
-            </a>
-         </div>
-
-         <hr>
-         <div class="footer-row">
-            <div class="footer__navigation">
-               <div class="cmp-text">
-                  <h1>NOSOTROS</h1>
-                  <p>Empresa peruana dedicada a la comercialización de insumos agrícolas.</p>
-                  <br>
-                  <br>
-                  <img src="imagenes/logo1.png" alt="Logo PROCAMPO">
-               </div>
-            </div>
-            <div class="footer__mobile-accordion">
-               <div class="cmp-text">
-                  <h1> UBICANOS</h1>
-                  <ul>
-                     <li><a href="https://maps.app.goo.gl/5ex8xv6eRP5W7sfR9" target="_blank" style="color: white;">Mapa
-                           del sitio</a></li>
-                     <br>
-                     <br>
-                     <a href="https://maps.app.goo.gl/5ex8xv6eRP5W7sfR9" target="_blank"><img
-                           src="imagenes/peru (1).png" alt="mapa"></a>
-                  </ul>
-                  </ul>
-                  <h1>CONTACTOS</h1>
-                  <ul>
-
-                     <li><i class="fas fa-map-marker-alt"></i> Calle Capitán Salvador Carmona N°216 - Ate – Lima</li>
-                     <li><i class="fas fa-envelope"></i> servicio.cliente@procampo.com.pe</li>
-                     <li><i class="fas fa-phone"></i> (511) 364 7338 - (511) 364 7335 - (511) 364 7333</li>
-                  </ul>
-               </div>
-            </div>
-            <div class="footer__link-list">
-               <div class="cmp-text">
-                  <h1>TÉRMINOS Y CONDICIONES</h1>
-                  <ul>
-                     <li>Términos de uso</li>
-                     <li>Política de Privacidad</li>
-                     <li>Configuración de cookies</li>
-                  </ul>
-               </div>
-            </div>
-            <div class="social-icons">
-               <h1>BUSCANOS</h1>
-               <br>
-               <ul>
-                  <li><a href="https://web.facebook.com/Procampo.s.a/?_rdc=1&_rdr" target="_blank"><span
-                           class="facebook"><i class="fab fa-facebook-f"></i></span></a></li>
-                  <li><a href="https://www.linkedin.com/in/procampo-s-a-grupo-chiaway/" target="_blank"><span
-                           class="linkedin"><i class="fab fa-linkedin-in"></i></span></a></li>
-                  <li><a href="https://www.youtube.com/channel/UC6Jng8EgHYbxj5CV7JvuW6Q?view_as=subscriber"
-                        target="_blank"><span class="youtube"><i class="fab fa-youtube"></i></span></a></li>
-                  <li><a href="https://www.instagram.com/procampo.peru/" target="_blank"><span class="instagram"><i
-                              class="fab fa-instagram"></i></span></a></li>
-               </ul>
-
-            </div>
-         </div>
-         <hr>
-         <div class="text footer__bottom--privacy">
+      <hr>
+      <div class="footer-row">
+         <div class="footer__navigation">
             <div class="cmp-text">
-               <p>
-               <h3>© 2024 Creado por Liliana Martínez Lalangui.</h3>
-               </p>
+               <h1>NOSOTROS</h1>
+               <p>Empresa peruana dedicada a la comercialización de insumos agrícolas.</p>
+               <br>
+               <img src="imagenes/logo1.png" alt="Logo PROCAMPO">
             </div>
+         </div>
+         <div class="footer__mobile-accordion">
+            <div class="cmp-text">
+               <h1> UBICANOS</h1>
+               <ul>
+                  <li><a href="https://maps.app.goo.gl/5ex8xv6eRP5W7sfR9" target="_blank" style="color: white;">Mapa
+                        del sitio</a></li>
+                  <br>
+                  <br>
+                  <a href="https://maps.app.goo.gl/5ex8xv6eRP5W7sfR9" target="_blank"><img src="imagenes/peru (1).png"
+                        alt="mapa"></a>
+               </ul>
+               <h1>CONTACTOS</h1>
+               <ul>
+                  <li><i class="fas fa-map-marker-alt"></i> Calle Capitán Salvador Carmona N°216 - Ate – Lima</li>
+                  <li><i class="fas fa-envelope"></i> servicio.cliente@procampo.com.pe</li>
+                  <li><i class="fas fa-phone"></i> (511) 364 7338 - (511) 364 7335 - (511) 364 7333</li>
+               </ul>
+            </div>
+         </div>
+         <div class="footer__link-list">
+            <div class="cmp-text">
+               <h1>TÉRMINOS Y CONDICIONES</h1>
+               <ul>
+                  <li>Términos de uso</li>
+                  <li>Política de Privacidad</li>
+                  <li>Configuración de cookies</li>
+               </ul>
+            </div>
+         </div>
+         <div class="social-icons">
+            <h1>BUSCANOS</h1>
+            <br>
+            <ul>
+               <li><a href="https://web.facebook.com/Procampo.s.a/?_rdc=1&_rdr" target="_blank"><span
+                        class="facebook"><i class="fab fa-facebook-f"></i></span></a></li>
+               <li><a href="https://www.linkedin.com/in/procampo-s-a-grupo-chiaway/" target="_blank"><span
+                        class="linkedin"><i class="fab fa-linkedin-in"></i></span></a></li>
+               <li><a href="https://www.youtube.com/channel/UC6Jng8EgHYbxj5CV7JvuW6Q?view_as=subscriber"
+                     target="_blank"><span class="youtube"><i class="fab fa-youtube"></i></span></a></li>
+               <li><a href="https://www.instagram.com/procampo.peru/" target="_blank"><span class="instagram"><i
+                           class="fab fa-instagram"></i></span></a></li>
+            </ul>
          </div>
       </div>
-   </footer>
+      <hr>
+      <div class="text footer__bottom--privacy">
+         <div class="cmp-text">
+            <h3>© 2024 Creado por Liliana Martínez Lalangui.</h3>
+         </div>
+      </div>
+   </div>
+</footer>
 
-   </section>
-   <script src="scriptProductos.js"></script>
+<script src="scriptProductos.js"></script>
 
 </body>
 
