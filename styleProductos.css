@@ -954,3 +954,157 @@ input {
    cursor: pointer;
    font-size: 18px;
 }
+
+
+/* Estilos del icono del carrito */
+.carrito {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 450px;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+.carrito h3 {
+    background-color: #000;
+    color: #fff;
+    padding: 13px;
+    text-align: center;
+    border-radius: 8px 8px 8px 8px;
+    margin: 0;
+    font-size: 24px;
+}
+
+.lista-carrito {
+    max-height: 400px;
+    overflow-y: auto;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.item-carrito img {
+    width: 70px;
+    height: 50px;
+    border-radius: 4px;
+}
+
+.info-producto {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.info-producto h4 {
+    margin: 0 0 5px;
+    font-size: 16px;
+}
+
+.info-producto p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.acciones-producto {
+    display: flex;
+    align-items: center;
+}
+
+.cantidad {
+   display: flex;
+   align-items: center;
+   margin-right: 10px;
+   
+}
+
+.cantidad button {
+   background-color: #ddd;
+   border: none;
+   padding: 5px 10px;
+   cursor: pointer;
+   border-radius: 50%; 
+}
+
+.cantidad button:hover {
+   background-color: #ccc;
+}
+
+.cantidad input {
+  width: 30px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  margin: 0 5px;
+  display: inline-block; 
+  /* Quita la propiedad display:none; que oculta el input */
+}
+
+.eliminar {
+   font-size: 20px;
+   color: #ff0000;
+   cursor: pointer;
+   
+}
+
+.eliminar:hover {
+   color: #cc0000;
+   
+   
+}
+
+.price-total {
+   color: black;
+   font-size: 28x;
+   text-align: right;
+}
+
+.carrito button {
+   background-color: #000;
+   color: white;
+   padding: 10px;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+   border-radius: 8px;
+   font-size: 20px;
+   margin-top: 10px;
+}
+
+.carrito button:hover {
+   background-color: #333;
+}
+
+.close-btn {
+   position: absolute;
+   top: 3px;
+   right: 409px;
+   cursor: pointer;
+   font-size: 20px;
+   color: #fff;
+   width: 40px;        
+   height: 40px;      
+   border-radius: 50%; 
+   background-color: rgb(31, 180, 14); 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.carrito h2 {
+   text-align: center;
+   margin: 10px 0;
+   color: black;
+}

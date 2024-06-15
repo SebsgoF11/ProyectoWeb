@@ -5,6 +5,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -39,264 +40,263 @@
 <body>
     <!--para la parte del menu-->
     <header>
-        <a href="#" class="logo"><img src="imagenes/logo1.png" alt="Logo"></a>
-        <ul class="navmenu">
-            <li><a href="Index_Inicio.html" style="color: black; font-weight: bold;">INICIO</a></li>
-            <li><a href="Index_Nosotros.html" style="color: black; font-weight: bold;">NOSOTROS</a></li>
-            <li><a href="Index_Productos.html" style="color: black; font-weight: bold;">PRODUCTOS</a></li>
-            <li><a href="Index_Novedades.html" style="color: black; font-weight: bold;">NOVEDADES</a></li>
-            <li><a href="Index_Accesos.html" style="color: black; font-weight: bold;">ACCESOS</a></li>
-        </ul>
+      <a href="#" class="logo"><img src="imagenes/logo1.png" alt="Logo"></a>
+      <ul class="navmenu">
+          <li><a href="Index_Inicio.html" style="color: black; font-weight: bold;">INICIO</a></li>
+          <li><a href="Index_Nosotros.html" style="color: black; font-weight: bold;">NOSOTROS</a></li>
+          <li><a href="Index_Productos.html" style="color: black; font-weight: bold;">PRODUCTOS</a></li>
+          <li><a href="Index_Novedades.html" style="color: black; font-weight: bold;">NOVEDADES</a></li>
+          <li><a href="Index_Accesos.html" style="color: black; font-weight: bold;">ACCESOS</a></li>
+      </ul>
 
-        <div class="container_bus">
-            <input type="text" id="searchInput" placeholder="Buscar">
-            <div class="btn" id="searchBtn">
-                <i class="fa fa-search"></i>
-            </div>
-        </div>
-        
-        <div class="nav-icon">
-         <i class="bx bx-user"></i>
-        </div>
+      <div class="container_bus">
+          <input type="text" id="searchInput" placeholder="Buscar">
+          <div class="btn" id="searchBtn">
+              <i class="fa fa-search"></i>
+          </div>
+      </div>
+      
       <div class="nav-icon">
-         <i class="bx bx-cart"></i>
-         </div>
-    
-        <div class="capa"></div>
-        <input type="checkbox" id="btn-menu">
-        <label for="btn-menu" class="menu-icon">☰</label>
-        <div class="container-menu">
-            <div class="cont-menu">
-                <label for="btn-menu">✖️</label>
-                <nav>
-                    <a href="#">Portafolio</a>
-                    <a href="#">Servicios</a>
-                    <a href="#">Suscribirse</a>
-                    <a href="#">Facebook</a>
-                    <a href="#">Youtube</a>
-                    <a href="#">Instagram</a>
-                </nav>
-            </div>
-        </div>
-    </header>
+          <i class="bx bx-user"></i>
+      </div>
 
-   <section class="main-home">
+<!-- icono de carrito -->
+<div class="carrito-icono" id="carrito-icono" onclick="mostrarCarrito()">
+   <i class="fas fa-cart-arrow-down" style="font-size: 18px;"></i>
+   <span class="badge" id="cart-count">0</span>
+   <p class="count-product" id="count-product">0</p>
+</div>
+
+
+<!-- Carrito de compras -->
+<div class="carrito" id="carrito">
+   <p class="close-btn" onclick="ocultarCarrito()">x</p>
+   <h3>Tu Carrito</h3>
+   <div class="lista-carrito" id="lista-carrito"></div>
+   <h2>Tu Total: $<strong class="price-total" id="total">0.00</strong></h2>
+   <button onclick="realizarPago()">Pagar</button>
+</div>
+
+
+
+      <div class="capa"></div>
+      <input type="checkbox" id="btn-menu">
+      <label for="btn-menu" class="menu-icon">☰</label>
+      <div class="container-menu">
+          <div class="cont-menu">
+              <label for="btn-menu">✖️</label>
+              <nav>
+                  <a href="#">Portafolio</a>
+                  <a href="#">Servicios</a>
+                  <a href="#">Suscribirse</a>
+                  <a href="#">Facebook</a>
+                  <a href="#">Youtube</a>
+                  <a href="#">Instagram</a>
+              </nav>
+          </div>
+      </div>
+  </header>
+
+  <section class="main-home">
       <div class="main-text">
-         <br>
-         <br>
-         <br>
-         <br>
-         <h5>¡Descubre lo Mejor de Procampo!</h5>
-         <h1>¡Exclusiva Venta de los mejores<br> Productos Procampo!</h1>
-         <p>¡Sumérgete en la Excelencia y Calidad!</p>
-         <a href="#" class="main-btn"> Comprar <i class="bx bx-right-arrow-alt"></i></a>
+          <br><br><br><br>
+          <h5>¡Descubre lo Mejor de Procampo!</h5>
+          <h1>¡Exclusiva Venta de los mejores<br> Productos Procampo!</h1>
+          <p>¡Sumérgete en la Excelencia y Calidad!</p>
+          <a href="#" class="main-btn">Comprar <i class="bx bx-right-arrow-alt"></i></a>
       </div>
       <div class="down-arrow">
-         <a href="#trending" class="down"><i class='bx bx-down-arrow-alt'></i></a>
+          <a href="#trending" class="down"><i class='bx bx-down-arrow-alt'></i></a>
       </div>
-      <div id="trending" style="margin-top: 35vh; padding: 20px;">
-         
-     </div>
-   </section>
+      <div id="trending" style="margin-top: 35vh; padding: 20px;"></div>
+  </section>
 
-   <!--para botones de categoria-->
-   
-   <div class="container-button">
-      
-      <p><h1>LOS DIFERENTES PRODUCTOS QUE TENEMOS PARA TI</h1></p>
+  <!--para botones de categoria-->
+  <div class="container-button">
+      <h1>LOS DIFERENTES PRODUCTOS QUE TENEMOS PARA TI</h1>
 
       <div class="wrapper">
-         <div id="search-container">
-           <input
-             type="search"
-             id="search-input"
-             placeholder="  Buscar...."
-           />
-           <button id="search">Search</button>
-         </div>
-  
-      <div class="filter_buttons">
-         <button onclick="setActive(this, 'all')">MOSTRAR TODAS LAS CATEGORIAS</button>
-         <button onclick="setActive(this, 'container')">AGROQUÍMICOS</button>
-         <button onclick="setActive(this, 'container_2')">ACIDIFICANTES CON INDICADOR DE PH </button>
-         <button onclick="setActive(this, 'container_3')">ÁCIDO HÚMICO</button>
-         <button onclick="setActive(this, 'container_4')">ADHERENTES SURFACTANTES HUMECTANTES</button>
-         <button onclick="setActive(this, 'container_5')">BIOESTIMULANTES </button>
-         <button onclick="setActive(this, 'container_6')">FERTILIZANTES FOLIARES</button>
+          <div id="search-container">
+              <input type="search" id="search-input" placeholder="Buscar....">
+              <button id="search">Buscar</button>
+          </div>
+
+          <div class="filter_buttons">
+              <button onclick="setActive(this, 'all')">MOSTRAR TODAS LAS CATEGORIAS</button>
+              <button onclick="setActive(this, 'container')">AGROQUÍMICOS</button>
+              <button onclick="setActive(this, 'container_2')">ACIDIFICANTES CON INDICADOR DE PH</button>
+              <button onclick="setActive(this, 'container_3')">ÁCIDO HÚMICO</button>
+              <button onclick="setActive(this, 'container_4')">ADHERENTES SURFACTANTES HUMECTANTES</button>
+              <button onclick="setActive(this, 'container_5')">BIOESTIMULANTES</button>
+              <button onclick="setActive(this, 'container_6')">FERTILIZANTES FOLIARES</button>
+          </div>
       </div>
-   </div>
 
    <!-- primera categoria  -->
-  
    <div class="container">
       <h3 class="title">Agroquímicos</h3>
       <div class="products-container">
-         <div class="product" data-name="p-1">
-            <img src="./imagenes/pro1.jpg" alt="">
-            <h3>AMINOTERRA GREEN X 20 LT</h3>
-            <div class="price">$25.00</div>
-         </div>
+          <div class="product" data-name="p-1">
+              <img src="./imagenes/pro1.jpg" alt="AMINOTERRA GREEN X 20 LT">
+              <h3>AMINOTERRA GREEN X 20 LT</h3>
+              <div class="price">$25.00</div>
+             
+          </div>
 
-         <div class="product" data-name="p-2">
-            <img src="./imagenes/pro2.jpg" alt="">
-            <h3>AMINOTERRA PLUS ZN X 20 LTS</h3>
-            <div class="price">$20.00</div>
-         </div>
+          <div class="product" data-name="p-2">
+              <img src="./imagenes/pro2.jpg" alt="AMINOTERRA PLUS ZN X 20 LTS">
+              <h3>AMINOTERRA PLUS ZN X 20 LTS</h3>
+              <div class="price">$20.00</div>
+          </div>
 
-         <div class="product" data-name="p-3">
-            <img src="./imagenes/pro3.jpg" alt="">
-            <h3>ESCUDERO X 1 LT</h3>
-            <div class="price">$18.00</div>
-         </div>
+          <div class="product" data-name="p-3">
+              <img src="./imagenes/pro3.jpg" alt="ESCUDERO X 1 LT">
+              <h3>ESCUDERO X 1 LT</h3>
+              <div class="price">$18.00</div>
+          </div>
 
-         <div class="product" data-name="p-4">
-            <img src="./imagenes/pro4.jpg" alt="">
-            <h3>KELP WAY ALGAE X 1 LT</h3>
-            <div class="price">$30.00</div>
-         </div>
+          <div class="product" data-name="p-4">
+              <img src="./imagenes/pro4.jpg" alt="KELP WAY ALGAE X 1 LT">
+              <h3>KELP WAY ALGAE X 1 LT</h3>
+              <div class="price">$30.00</div>
+          </div>
 
-         <div class="product" data-name="p-5">
-            <img src="./imagenes/n1.png" alt="">
-            <h3>BIOIL-S (ENHANCE) X 20 LT</h3>
-            <div class="price">$30.00</div>
-         </div>
+          <div class="product" data-name="p-5">
+              <img src="./imagenes/n1.png" alt="BIOIL-S (ENHANCE) X 20 LT">
+              <h3>BIOIL-S (ENHANCE) X 20 LT</h3>
+              <div class="price">$30.00</div>
+          </div>
 
-         <div class="product" data-name="p-6">
-            <img src="./imagenes/n2.png" alt="">
-            <h3>BIOAMINO-L X 20 LTS</h3>
-            <div class="price">$30.00</div>
-         </div>
+          <div class="product" data-name="p-6">
+              <img src="./imagenes/n2.png" alt="BIOAMINO-L X 20 LTS">
+              <h3>BIOAMINO-L X 20 LTS</h3>
+              <div class="price">$30.00</div>
+          </div>
       </div>
-   </div>
+  </div>
 
-   <div class="products-preview">
-
+  <div class="products-preview">
       <div class="preview" data-target="p-1">
-         <i class="fas fa-times"></i>
-         <img src="./imagenes/pro1.jpg" alt="">
-         <h3>AMINOTERRA GREEN X 20 LT</h3>
-         <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-            <span>( 250 )</span>
-         </div>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
-         <div class="price">$25.00</div>
-         <div class="buttons">
-            <a href="#" class="buy">buy now</a>
-            <a href="#" class="cart">add to cart</a>
-         </div>
+          <i class="fas fa-times"></i>
+          <img src="./imagenes/pro1.jpg" alt="AMINOTERRA GREEN X 20 LT">
+          <h3>AMINOTERRA GREEN X 20 LT</h3>
+          <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>( 250 )</span>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+          <div class="price">$25.00</div>
+          <div class="buttons">
+              <a href="#" class="buy">buy now</a>
+              <a href="" data-id="1" class="cart">add to cart</a>
+          </div>
       </div>
 
       <div class="preview" data-target="p-2">
-         <i class="fas fa-times"></i>
-         <img src="./imagenes/pro2.jpg" alt="">
-         <h3>AMINOTERRA PLUS ZN X 20 LTSs</h3>
-         <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-            <span>( 250 )</span>
-         </div>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
-         <div class="price">$20.00</div>
-         <div class="buttons">
-            <a href="#" class="buy">buy now</a>
-            <a href="#" class="cart">add to cart</a>
-         </div>
+          <i class="fas fa-times"></i>
+          <img src="./imagenes/pro2.jpg" alt="AMINOTERRA PLUS ZN X 20 LTS">
+          <h3>AMINOTERRA PLUS ZN X 20 LTS</h3>
+          <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>( 250 )</span>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+          <div class="price">$20.00</div>
+          <div class="buttons">
+              <a href="#" class="buy">buy now</a>
+              <a href="#" data-id="2" class="cart" >add to cart</a>
+          </div>
       </div>
 
       <div class="preview" data-target="p-3">
-         <i class="fas fa-times"></i>
-         <img src="./imagenes/pro3.jpg" alt="">
-         <h3>ESCUDERO X 1 LT</h3>
-         <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-            <span>( 250 )</span>
-         </div>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
-         <div class="price">$18.00</div>
-         <div class="buttons">
-            <a href="#" class="buy">buy now</a>
-            <a href="#" class="cart">add to cart</a>
-         </div>
+          <i class="fas fa-times"></i>
+          <img src="./imagenes/pro3.jpg" alt="ESCUDERO X 1 LT">
+          <h3>ESCUDERO X 1 LT</h3>
+          <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>( 250 )</span>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+          <div class="price">$18.00</div>
+          <div class="buttons">
+              <a href="#" class="buy">buy now</a>
+              <a href="#" data-id="3" class="cart" >add to cart</a>
+          </div>
       </div>
 
       <div class="preview" data-target="p-4">
-         <i class="fas fa-times"></i>
-         <img src="./imagenes/pro4.jpg" alt="">
-         <h3>KELP WAY ALGAE X 1 LT</h3>
-         <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-            <span>( 250 )</span>
-         </div>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
-         <div class="price">$30.00</div>
-         <div class="buttons">
-            <a href="#" class="buy">buy now</a>
-            <a href="#" class="cart">add to cart</a>
-         </div>
+          <i class="fas fa-times"></i>
+          <img src="./imagenes/pro4.jpg" alt="KELP WAY ALGAE X 1 LT">
+          <h3>KELP WAY ALGAE X 1 LT</h3>
+          <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>( 250 )</span>
+          </div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+          <div class="price">$30.00</div>
+          <div class="buttons">
+              <a href="#" class="buy">buy now</a>
+              <a href="#" data-id="4" class="cart" >add to cart</a>
+          </div>
       </div>
 
-
-
       <div class="preview" data-target="p-5">
-         <i class="fas fa-times"></i>
-         <img src="./imagenes/n1.png" alt="">
-         <h3>BIOIL-S (ENHANCE) X 20 LT</h3>
-         <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-            <span>( 250 )</span>
-         </div>
-         <p>Aceite natural, obtenido del salmón, con propiedades únicas que promueven el desarrollo de defensa en las
-            plantas.</p>
-         <div class="price">$25.00</div>
-         <div class="buttons">
-            <a href="#" class="buy">buy now</a>
-            <a href="#" class="cart">add to cart</a>
-         </div>
+          <i class="fas fa-times"></i>
+          <img src="./imagenes/n1.png" alt="BIOIL-S (ENHANCE) X 20 LT">
+          <h3>BIOIL-S (ENHANCE) X 20 LT</h3>
+          <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>( 250 )</span>
+          </div>
+          <p>Aceite natural, obtenido del salmón, con propiedades únicas que promueven el desarrollo de defensa en las plantas.</p>
+          <div class="price">$30.00</div>
+          <div class="buttons">
+              <a href="#" class="buy">buy now</a>
+              <a href="#" data-id="5" class="cart" >add to cart</a>
+          </div>
       </div>
 
       <div class="preview" data-target="p-6">
-         <i class="fas fa-times"></i>
-         <img src="./imagenes/n2.png" alt="">
-         <h3>BIOAMINO-L X 20 LTS</h3>
-         <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star-half-alt"></i>
-            <span>( 250 )</span>
-         </div>
-         <p>Es una enmienda orgánica líquida que activa la biología del suelo, gracias sus péptidos y polipéptidos de
-            bajo peso molecular, favoreciendo el desarrollo de micro y macroorganismos benéficos</p>
-         <div class="price">$25.00</div>
-         <div class="buttons">
-            <a href="#" class="buy">buy now</a>
-            <a href="#" class="cart">add to cart</a>
-         </div>
+          <i class="fas fa-times"></i>
+          <img src="./imagenes/n2.png" alt="BIOAMINO-L X 20 LTS">
+          <h3>BIOAMINO-L X 20 LTS</h3>
+          <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>( 250 )</span>
+          </div>
+          <p>Es una enmienda orgánica líquida que activa la biología del suelo, gracias a sus péptidos y polipéptidos de bajo peso molecular, favoreciendo el desarrollo de micro y macroorganismos benéficos.</p>
+          <div class="price">$30.00</div>
+          <div class="buttons">
+              <a href="#" class="buy">buy now</a>
+              <a href="#" data-id="6" class="cart" >add to cart</a>
+          </div>
       </div>
-   </div>
-
-
+  </div>
+ 
    <!--segunda categoria-->>
 
    <div class="container_2">
@@ -341,7 +341,7 @@
          <div class="price">$25.00</div>
          <div class="buttons">
             <a href="#" class="buy">buy now</a>
-            <a href="#" class="cart">add to cart</a>
+            <a href="#" data-id="7" class="cart">add to cart</a>
          </div>
       </div>
 
@@ -361,7 +361,7 @@
          <div class="price">$60.00</div>
          <div class="buttons">
             <a href="#" class="buy">buy now</a>
-            <a href="#" class="cart">add to cart</a>
+            <a href="#" data-id="8" class="cart">add to cart</a>
          </div>
       </div>
 
@@ -381,7 +381,7 @@
          <div class="price">$20.00</div>
          <div class="buttons">
             <a href="#" class="buy">buy now</a>
-            <a href="#" class="cart">add to cart</a>
+            <a href="#" data-id="9" class="cart">add to cart</a>
          </div>
       </div>
    </div>
@@ -432,7 +432,7 @@
          <div class="price">$25.00</div>
          <div class="buttons">
             <a href="#" class="buy">buy now</a>
-            <a href="#" class="cart">add to cart</a>
+            <a href="#" data-id="10" class="cart">add to cart</a>
          </div>
       </div>
 
@@ -452,7 +452,7 @@
          <div class="price">$20.00</div>
          <div class="buttons">
             <a href="#" class="buy">buy now</a>
-            <a href="#" class="cart">add to cart</a>
+            <a href="#" data-id="11" class="cart">add to cart</a>
          </div>
       </div>
 
@@ -472,7 +472,7 @@
          <div class="price">$18.00</div>
          <div class="buttons">
             <a href="#" class="buy">buy now</a>
-            <a href="#" class="cart">add to cart</a>
+            <a href="#" data-id="12" class="cart">add to cart</a>
          </div>
       </div>
    </div>
@@ -1212,14 +1212,10 @@
             <a href="#" class="cart">add to cart</a>
          </div>
       </div>
-
    </div>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
+   <br><br> <br> <br> <br>
 
+  
   <!-- contactos -->
   <footer class="footer">
    <div class="container">
@@ -1293,6 +1289,166 @@
       </div>
    </div>
 </footer>
+
+<script>
+
+// Función para mostrar el carrito
+function mostrarCarrito() {
+    const carritoContenedor = document.querySelector('.carrito');
+    carritoContenedor.style.display = 'block';
+}
+
+// Función para ocultar el carrito
+function ocultarCarrito() {
+    const carritoContenedor = document.querySelector('.carrito');
+    carritoContenedor.style.display = 'none';
+}
+
+// Función para realizar el pago (simulación)
+function realizarPago() {
+    alert('Pago realizado con éxito');
+}
+
+let carrito = [];
+
+// Función para añadir un producto al carrito
+function addToCart(name, price) {
+    // Verificar si el producto ya está en el carrito
+    const existingItemIndex = carrito.findIndex(item => item.name === name);
+    if (existingItemIndex !== -1) {
+        // Si el producto ya está en el carrito, aumentar la cantidad
+        carrito[existingItemIndex].quantity++;
+    } else {
+        // Si el producto no está en el carrito, agregarlo
+        const item = {
+            name: name,
+            price: price,
+            quantity: 1 
+        };
+        carrito.push(item);
+    }
+    updateCart();
+}
+
+// Función para actualizar el carrito en la interfaz
+function updateCart() {
+    const carritoIcono = document.getElementById('carrito-icono');
+    const cartCount = document.getElementById('cart-count');
+    const countProduct = document.querySelector('.count-product');
+    const listaCarrito = document.getElementById('lista-carrito');
+    const totalElement = document.getElementById('total');
+
+    // Reiniciar el contenido del carrito
+    listaCarrito.innerHTML = '';
+
+    // Mostrar la cantidad de productos en el carrito
+    let totalQuantity = 0;
+    carrito.forEach(item => {
+        totalQuantity += item.quantity;
+    });
+    cartCount.textContent = totalQuantity;
+    countProduct.textContent = totalQuantity;
+
+    // Calcular el total
+    let total = 0;
+    carrito.forEach(item => {
+        total += item.price * item.quantity;
+        const itemElement = document.createElement('div');
+        itemElement.classList.add('item-carrito');
+        itemElement.innerHTML = `
+            <img src="./imagenes/${item.name.toLowerCase().replace(/\s+/g, '-')}.png" alt="${item.name}">
+            <div class="info-producto">
+                <h4>${item.name}</h4>
+                <p>Precio: $${item.price}</p>
+            </div>
+            <div class="acciones-producto">
+                <div class="cantidad">
+                    <button onclick="decreaseQuantity(this, '${item.name}')">-</button>
+                    <input type="text" value="${item.quantity}" id="quantity-${item.name}" readonly>
+                    <button onclick="increaseQuantity(this, '${item.name}')">+</button>
+                </div>
+                <i class="fas fa-trash eliminar" onclick="removeFromCart('${item.name}')"></i>
+            </div>
+        `;
+        listaCarrito.appendChild(itemElement);
+    });
+
+    // Mostrar el total
+    totalElement.textContent = total.toFixed(2);
+}
+
+// Función para aumentar la cantidad de un producto en el carrito
+function increaseQuantity(button, name) {
+  const input = button.previousElementSibling;
+  let quantity = parseInt(input.value);
+  if (isNaN(quantity)) {
+    quantity = 1;
+  }
+  input.value = quantity + 1;
+  updateCartItemQuantity(name, quantity + 1);
+}
+
+// Función para disminuir la cantidad de un producto en el carrito
+function decreaseQuantity(button, name) {
+    const input = button.nextElementSibling;
+    const quantity = parseInt(input.value);
+    if (quantity > 1) {
+        input.value = quantity - 1;
+        updateCartItemQuantity(name, quantity - 1);
+    }
+}
+
+// Función para actualizar la cantidad de un producto en el carrito
+function updateCartItemQuantity(name, quantity) {
+    const itemIndex = carrito.findIndex(item => item.name === name);
+    if (itemIndex !== -1) {
+        carrito[itemIndex].quantity = quantity;
+        updateCart();
+    }
+}
+
+// Función para eliminar un producto del carrito
+function removeFromCart(name) {
+    carrito = carrito.filter(item => item.name !== name);
+    updateCart();
+}
+
+// Función para activar la categoría seleccionada
+function setActive(button, category) {
+    const buttons = document.querySelectorAll('.filter_buttons button');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    // Mostrar productos de la categoría seleccionada
+    const containers = document.querySelectorAll('.container');
+    containers.forEach(container => {
+        container.style.display = 'none';
+    });
+    const selectedContainer = document.querySelector(`.${category}`);
+    selectedContainer.style.display = 'block';
+}
+
+// Añadir eventos a los botones de "Añadir al carrito"
+document.querySelectorAll('.cart').forEach(btn => {
+    btn.addEventListener('click', e => {
+        const product = e.target.parentElement.parentElement;
+        const name = product.querySelector('h3').textContent;
+        const price = parseFloat(product.querySelector('.price').textContent.substring(1));
+        addToCart(name, price);
+    });
+});
+
+// Añadir eventos a los botones de categoría
+document.querySelectorAll('.filter_buttons button').forEach(button => {
+    button.addEventListener('click', () => {
+        setActive(button, button.dataset.category);
+    });
+});
+
+
+
+
+</script>
 
 <script src="scriptProductos.js"></script>
 
