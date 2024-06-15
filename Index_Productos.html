@@ -1292,6 +1292,7 @@
 
 <script>
 
+
 // Función para mostrar el carrito
 function mostrarCarrito() {
     const carritoContenedor = document.querySelector('.carrito');
@@ -1312,7 +1313,7 @@ function realizarPago() {
 let carrito = [];
 
 // Función para añadir un producto al carrito
-function addToCart(name, price) {
+function addToCart(name, price, imageSrc) {
     // Verificar si el producto ya está en el carrito
     const existingItemIndex = carrito.findIndex(item => item.name === name);
     if (existingItemIndex !== -1) {
@@ -1323,7 +1324,8 @@ function addToCart(name, price) {
         const item = {
             name: name,
             price: price,
-            quantity: 1 
+            quantity: 1,
+            imageSrc: imageSrc
         };
         carrito.push(item);
     }
@@ -1356,7 +1358,7 @@ function updateCart() {
         const itemElement = document.createElement('div');
         itemElement.classList.add('item-carrito');
         itemElement.innerHTML = `
-            <img src="./imagenes/${item.name.toLowerCase().replace(/\s+/g, '-')}.png" alt="${item.name}">
+            <img src="${item.imageSrc}" alt="${item.name}">
             <div class="info-producto">
                 <h4>${item.name}</h4>
                 <p>Precio: $${item.price}</p>
@@ -1434,7 +1436,8 @@ document.querySelectorAll('.cart').forEach(btn => {
         const product = e.target.parentElement.parentElement;
         const name = product.querySelector('h3').textContent;
         const price = parseFloat(product.querySelector('.price').textContent.substring(1));
-        addToCart(name, price);
+        const imageSrc = product.querySelector('img').src;
+        addToCart(name, price, imageSrc);
     });
 });
 
@@ -1445,10 +1448,10 @@ document.querySelectorAll('.filter_buttons button').forEach(button => {
     });
 });
 
-
-
-
 </script>
+
+
+
 
 <script src="scriptProductos.js"></script>
 
