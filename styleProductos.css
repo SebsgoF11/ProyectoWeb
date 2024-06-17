@@ -750,25 +750,25 @@ body {
    
 }
 
-.filter-buttons {
+.filter_buttons {
    display: flex;
-   justify-content: center;
+   justify-content: center; 
    flex-wrap: wrap;
    gap: 10px;
    margin-top: 20px;
 }
 
-.filter-buttons button {
+button {
    padding: 10px 20px;
    font-size: 18px;
    background: rgb(66, 209, 66);
    border: none;
    border-radius: 6px;
-   cursor: pointer;
+   cursor:pointer;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-.filter-buttons button.active {
+button.active {
    background: #97eda1;
    color: #fff;
 }
@@ -1184,4 +1184,3 @@ input {
    color: black;
    font-size: 18px;
 }
-
