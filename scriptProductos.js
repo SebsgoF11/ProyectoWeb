@@ -174,24 +174,23 @@ function setActive(button, targetContainer) {
 
   // Mostrar solo el contenedor correspondiente a la categoría seleccionada
   var containers = document.querySelectorAll('.container, .container_2, .container_3,.container_4,.container_5,.container_6');
-  containers.forEach(function (container) {
-    container.style.display = 'none';
+  containers.forEach(function(container) {
+      container.style.display = 'none';
   });
 
   if (targetContainer === 'all') {
-    containers.forEach(function (container) {
-      container.style.display = 'block';
-    });
+      containers.forEach(function(container) {
+          container.style.display = 'block';
+      });
   } else {
-    document.querySelector('.' + targetContainer).style.display = 'block';
+      document.querySelector('.' + targetContainer).style.display = 'block';
   }
 }
 
-/*   flecha      */
-document.getElementById('arrow').addEventListener('click', function (event) {
-  event.preventDefault();  // Prevent the default anchor behavior
 
-  // Get the target element
+// Código para la flecha de desplazamiento
+document.getElementById('arrow').addEventListener('click', function(event) {
+  event.preventDefault();
   const target = document.getElementById('trending');
   const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
   window.scrollTo({ top: targetPosition, behavior: 'smooth' });

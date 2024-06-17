@@ -750,7 +750,7 @@ body {
    
 }
 
-.filter_buttons {
+.filter-buttons {
    display: flex;
    justify-content: center;
    flex-wrap: wrap;
@@ -758,7 +758,7 @@ body {
    margin-top: 20px;
 }
 
-button {
+.filter-buttons button {
    padding: 10px 20px;
    font-size: 18px;
    background: rgb(66, 209, 66);
@@ -768,7 +768,7 @@ button {
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-button.active {
+.filter-buttons button.active {
    background: #97eda1;
    color: #fff;
 }
