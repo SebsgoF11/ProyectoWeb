@@ -160,32 +160,33 @@ header.classList.toggle("sticky",this.window.scrollY)
 
 //CODIGO DE BOTONES DE CATEGORIA
 
-function setActive(button, targetContainer) {
-// Obtener todos los botones
-var buttons = document.querySelectorAll('.filter_buttons button');
+function setActiveCategory(button, targetContainer) {
+  // Obtener todos los botones
+  var buttons = document.querySelectorAll('.filter-buttons button');
 
-// Remover la clase 'active' de todos los botones
-buttons.forEach(function(btn) {
- btn.classList.remove('active');
-});
+  // Remover la clase 'active' de todos los botones
+  buttons.forEach(function(btn) {
+      btn.classList.remove('active');
+  });
 
-// Agregar la clase 'active' al botón seleccionado
-button.classList.add('active');
+  // Agregar la clase 'active' al botón seleccionado
+  button.classList.add('active');
 
-// Mostrar solo el contenedor correspondiente a la categoría seleccionada
-var containers = document.querySelectorAll('.container, .container_2, .container_3,.container_4,.container_5,.container_6');
-containers.forEach(function(container) {
- container.style.display = 'none';
-});
+  // Mostrar solo el contenedor correspondiente a la categoría seleccionada
+  var containers = document.querySelectorAll('.container, .container_2, .container_3,.container_4,.container_5,.container_6');
+  containers.forEach(function(container) {
+      container.style.display = 'none';
+  });
 
-if (targetContainer === 'all') {
- containers.forEach(function(container) {
-   container.style.display = 'block';
- });
-} else {
- document.querySelector('.' + targetContainer).style.display = 'block';
+  if (targetContainer === 'all') {
+      containers.forEach(function(container) {
+          container.style.display = 'block';
+      });
+  } else {
+      document.querySelector('.' + targetContainer).style.display = 'block';
+  }
 }
-}
+
 
 // Código para la flecha de desplazamiento
 document.getElementById('arrow').addEventListener('click', function(event) {

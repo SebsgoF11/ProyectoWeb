@@ -92,24 +92,26 @@
       <h1>LOS DIFERENTES PRODUCTOS QUE TENEMOS PARA TI</h1>
 
       <div class="wrapper">
-          <div id="search-container">
-              <input type="search" id="search-input" placeholder="Buscar....">
-              <button id="search">Buscar</button>
-          </div>
+         <div id="search-container">
+             <form action="buscar.php" method="GET">
+                 <input type="search" id="search-input" name="query" placeholder="Buscar....">
+                 <button type="submit" id="search">Buscar</button>
+             </form>
+         </div>
 
-          <div class="filter_buttons">
-              <button onclick="setActive(this, 'all')">MOSTRAR TODAS LAS CATEGORIAS</button>
-              <button onclick="setActive(this, 'container')">AGROQUÍMICOS</button>
-              <button onclick="setActive(this, 'container_2')">ACIDIFICANTES CON INDICADOR DE PH</button>
-              <button onclick="setActive(this, 'container_3')">ÁCIDO HÚMICO</button>
-              <button onclick="setActive(this, 'container_4')">ADHERENTES SURFACTANTES HUMECTANTES</button>
-              <button onclick="setActive(this, 'container_5')">BIOESTIMULANTES</button>
-              <button onclick="setActive(this, 'container_6')">FERTILIZANTES FOLIARES</button>
-          </div>
+          
+<div class="filter-buttons">
+   <button onclick="setActiveCategory(this, 'all')">MOSTRAR TODAS LAS CATEGORIAS</button>
+   <button onclick="setActiveCategory(this, 'container')">AGROQUÍMICOS</button>
+   <button onclick="setActiveCategory(this, 'container_2')">ACIDIFICANTES CON INDICADOR DE PH</button>
+   <button onclick="setActiveCategory(this, 'container_3')">ÁCIDO HÚMICO</button>
+   <button onclick="setActiveCategory(this, 'container_4')">ADHERENTES SURFACTANTES HUMECTANTES</button>
+   <button onclick="setActiveCategory(this, 'container_5')">BIOESTIMULANTES</button>
+   <button onclick="setActiveCategory(this, 'container_6')">FERTILIZANTES FOLIARES</button>
+</div>
+
       </div>
    </div>
-
-
 
    <!-- primera categoria  -->
    <div class="container">
@@ -278,7 +280,6 @@
  
    <!--segunda categoria-->
   
-
    <div class="container_2">
       
       <h3 class="title">Acidificantes con Indicador de ph</h3>
@@ -367,8 +368,6 @@
    </div>
 
    <!--tercera categoria-->
-
-
    <div class="container_3">
       <h3 class="title">Ácido Húmico</h3>
       <div class="products-container">
@@ -458,8 +457,6 @@
    </div>
 
    <!--cuarta categoria-->
-
-
    <div class="container_4">
       <h3 class="title">Adherentes Surfactantes Humectantes</h3>
       <div class="products-container">
@@ -947,8 +944,6 @@
             <h3>TRIADAMIN X 20 LT</h3>
             <div class="price">$58.00</div>
          </div>
-
-
       </div>
    </div>
 
