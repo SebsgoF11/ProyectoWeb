@@ -51,7 +51,7 @@ body {
 }
 
 .container_2 .title {
-   margin-top: 80px;
+   margin-top: -40px;
 }
 
 .container_3 .title {
@@ -544,8 +544,10 @@ header.sticky {
 }
 
 .container {
+   width: 100%; /* Ocupa el 100% del ancho de la pantalla */
    text-align: center;
-   margin-top: -100px;
+   margin: 0 auto; /* Centra el contenedor */
+
 }
 
 .footer-row {
@@ -579,7 +581,7 @@ header.sticky {
 
 .footer__mobile-accordion li {
    color: #ccc;
-   font-size: 18x;
+   font-size: 18px;
 }
 
 .footer__link-list .cmp-text ul li {
@@ -587,8 +589,7 @@ header.sticky {
    font-size: 18px;
 }
 
-.footer__mobile-accordion h1,
-.cmp-text li {
+.footer__mobile-accordion h1, .cmp-text li {
    font-size: 18px;
 }
 
@@ -772,7 +773,6 @@ button.active {
    background: #97eda1;
    color: #fff;
 }
-
 
 .container-button p {
    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -1002,6 +1002,7 @@ input {
    cursor: pointer;
    font-size: 18px;
 }
+
 .wrapper_busqueda {
    width: 95%;
    margin: 0 auto;
@@ -1184,3 +1185,4 @@ input {
    color: black;
    font-size: 18px;
 }
+
