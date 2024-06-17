@@ -153,14 +153,20 @@ previewBoxes6.forEach(close => {
 
 const header = document.querySelector("header");
 
+<<<<<<< Updated upstream
 window.addEventListener("scroll", function(){
 header.classList.toggle("sticky",this.window.scrollY)
+=======
+window.addEventListener("scroll", function () {
+  header.classList.toggle("sticky", this.window.scrollY)
+>>>>>>> Stashed changes
 
 })
 
 //CODIGO DE BOTONES DE CATEGORIA
 
 function setActive(button, targetContainer) {
+<<<<<<< Updated upstream
 // Obtener todos los botones
 var buttons = document.querySelectorAll('.filter_buttons button');
 
@@ -190,11 +196,45 @@ if (targetContainer === 'all') {
 // Código para la flecha de desplazamiento
 document.getElementById('arrow').addEventListener('click', function(event) {
   event.preventDefault();
+=======
+  // Obtener todos los botones
+  var buttons = document.querySelectorAll('.filter_buttons button');
+
+  // Remover la clase 'active' de todos los botones
+  buttons.forEach(function (btn) {
+    btn.classList.remove('active');
+  });
+
+  // Agregar la clase 'active' al botón seleccionado
+  button.classList.add('active');
+
+  // Mostrar solo el contenedor correspondiente a la categoría seleccionada
+  var containers = document.querySelectorAll('.container, .container_2, .container_3,.container_4,.container_5,.container_6');
+  containers.forEach(function (container) {
+    container.style.display = 'none';
+  });
+
+  if (targetContainer === 'all') {
+    containers.forEach(function (container) {
+      container.style.display = 'block';
+    });
+  } else {
+    document.querySelector('.' + targetContainer).style.display = 'block';
+  }
+}
+
+/*   flecha      */
+document.getElementById('arrow').addEventListener('click', function (event) {
+  event.preventDefault();  // Prevent the default anchor behavior
+
+  // Get the target element
+>>>>>>> Stashed changes
   const target = document.getElementById('trending');
   const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
   window.scrollTo({ top: targetPosition, behavior: 'smooth' });
 });
 
+<<<<<<< Updated upstream
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -207,3 +247,188 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+=======
+  // Animate the arrow's movement to the target position
+  window.scrollTo({
+    top: targetPosition,
+    behavior: 'smooth'
+  });
+});
+
+//-------------------------------------
+
+/* BARRA DE BUSQUEDAAA */
+
+let products = {
+  data:[
+    {
+      productName: "AMINOTERRA GREEN X 20 LT",
+      category: "Agroquimicos",
+      price: "$25.00",
+      image: "./imagenes/pro1.jpg",
+    },
+    {
+      productName: "AMINOTERRA PLUS ZN X 20 LTS",
+      category: "Agroquimicos",
+      price: "$20.00",
+      image: "./imagenes/pro2.jpg",
+    },
+    {
+      productName: "ESCUDERO X 1 LT<",
+      category: "Agroquimicos",
+      price: "$18.00",
+      image: "./imagenes/pro3.jpg",
+    },
+    {
+      productName: "KELP WAY ALGAE X 1 LT",
+      category: "Agroquimicos",
+      price: "$30.00",
+      image: "./imagenes/pro4.jpg",
+    },
+    {
+      productName: "BIOIL-S (ENHANCE) X 20 LT",
+      category: "Agroquimicos",
+      price: "$30.00",
+      image: "./imagenes/n1.png",
+    },
+    {
+      productName: "BIOAMINO-L X 20 LTS",
+      category: "Agroquimicos",
+      price: "$30.00",
+      image: "./imagenes/n2.png",
+    },
+    //----- SEGUNDA CATEGORIA */
+    {
+      productName: "TRIADA FOLIAR 18-28-8 KG",
+      category: "Acidificantes con Indicador de ph",
+      price: "$25.00",
+      image: "./imagenes/pro5.jpg",
+    },
+    {
+      productName: "ARIADA FOLIAR 18-28-8 X 10 KG",
+      category: "Acidificantes con Indicador de ph",
+      price: "$60.00",
+      image: "./imagenes/pro6.jpg",
+    },
+    {
+      productName: "TRIADA FOLIAR 18-45-0 KG",
+      category: "Acidificantes con Indicador de ph",
+      price: "$20.00",
+      image: "./imagenes/pro66.png",
+    },
+    //----- TERCERA CATEGORIA */
+    {
+      productName: "KELP WAY FULVICO X 200 LT",
+      category: "Ácido Húmico",
+      price: "$25.00",
+      image: "./imagenes/pro7.jpg",
+    },
+    {
+      productName: "KELP WAY HUMICO TECH X 1 LT",
+      category: "Ácido Húmico",
+      price: "$20.00",
+      image: "./imagenes/pro8.jpg",
+    },
+    {
+      productName: "KELP WAY HUMIKELP X 1LT",
+      category: "Ácido Húmico",
+      price: "$18.00",
+      image: "./imagenes/pro9.jpg",
+    },
+
+    //----- CUARTA CATEGORIA */
+
+    {
+      productName: "KELP WAY HUMIKELP X 1LT",
+      category: "Ácido Húmico",
+      price: "$18.00",
+      image: "./imagenes/pro9.jpg",
+    },
+
+  ]
+}
+
+// entrega de las funciones del JScript
+
+for (let i of products.data) {
+  //Create Card
+  let card = document.createElement("div");
+  //Card should have category and should stay hidden initially
+  card.classList.add("card", i.category, "hide");
+  //image div
+  let imgContainer = document.createElement("div");
+  imgContainer.classList.add("image-container");
+  //img tag
+  let image = document.createElement("img");
+  image.setAttribute("src", i.image);
+  imgContainer.appendChild(image);
+  card.appendChild(imgContainer);
+  //container
+  let container = document.createElement("div");
+  container.classList.add("container");
+  //product name
+  let name = document.createElement("h5");
+  name.classList.add("product-name");
+  name.innerText = i.productName.toUpperCase();
+  container.appendChild(name);
+  //price
+  let price = document.createElement("h6");
+  price.innerText = "$" + i.price;
+  container.appendChild(price);
+  card.appendChild(container);
+  document.getElementById("products").appendChild(card);
+}
+//parameter passed from button (Parameter same as category)
+function filterProduct(value) {
+  //Button class code
+  let buttons = document.querySelectorAll(".button-value");
+  buttons.forEach((button) => {
+    //check if value equals innerText
+    if (value.toUpperCase() == button.innerText.toUpperCase()) {
+      button.classList.add("active");
+    } else {
+      button.classList.remove("active");
+    }
+  });
+  //select all cards
+  let elements = document.querySelectorAll(".card");
+  //loop through all cards
+  elements.forEach((element) => {
+    //display all cards on 'all' button click
+    if (value == "all") {
+      element.classList.remove("hide");
+    } else {
+      //Check if element contains category class
+      if (element.classList.contains(value)) {
+        //display element based on category
+        element.classList.remove("hide");
+      } else {
+        //hide other elements
+        element.classList.add("hide");
+      }
+    }
+  });
+}
+//Search button click
+document.getElementById("search").addEventListener("click", () => {
+  //initializations
+  let searchInput = document.getElementById("search-input").value;
+  let elements = document.querySelectorAll(".product-name");
+  let cards = document.querySelectorAll(".card");
+  //loop through all elements
+  elements.forEach((element, index) => {
+    //check if text includes the search value
+    if (element.innerText.includes(searchInput.toUpperCase())) {
+      //display matching card
+      cards[index].classList.remove("hide");
+    } else {
+      //hide others
+      cards[index].classList.add("hide");
+    }
+  });
+});
+//Initially display all products
+window.onload = () => {
+  filterProduct("all");
+};
+>>>>>>> Stashed changes
