@@ -160,17 +160,16 @@ window.addEventListener("scroll", function () {
 
 //CODIGO DE BOTONES DE CATEGORIA
 
-function setActive(button, targetContainer) {
- HEAD
-// Obtener todos los botones
-var buttons = document.querySelectorAll('.filter_buttons button');
+function setActiveCategory(button, targetContainer) {
+  // Obtener todos los botones
+  var buttons = document.querySelectorAll('.filter-buttons button');
 
 // Obtener todos los botones
 var buttons = document.querySelectorAll('.filter_buttons button');
 
-// Remover la clase 'active' de todos los botones
-buttons.forEach(function(btn) {
- btn.classList.remove('active');
+  // Remover la clase 'active' de todos los botones
+  buttons.forEach(function(btn) {
+    btn.classList.remove('active');
 });
 
 // Agregar la clase 'active' al botón seleccionado
