@@ -244,75 +244,75 @@ let products = {
       productName: "AMINOTERRA GREEN X 20 LT",
       category: "Agroquimicos",
       price: "$25.00",
-      image: "./imagenes/pro1.jpg",
+      image: "./imagenes/pro1.webp",
     },
     {
       productName: "AMINOTERRA PLUS ZN X 20 LTS",
       category: "Agroquimicos",
       price: "$20.00",
-      image: "./imagenes/pro2.jpg",
+      image: "./imagenes/pro2.webp",
     },
     {
       productName: "ESCUDERO X 1 LT<",
       category: "Agroquimicos",
       price: "$18.00",
-      image: "./imagenes/pro3.jpg",
+      image: "./imagenes/pro3.webp",
     },
     {
       productName: "KELP WAY ALGAE X 1 LT",
       category: "Agroquimicos",
       price: "$30.00",
-      image: "./imagenes/pro4.jpg",
+      image: "./imagenes/pro4.webp",
     },
     {
       productName: "BIOIL-S (ENHANCE) X 20 LT",
       category: "Agroquimicos",
       price: "$30.00",
-      image: "./imagenes/n1.png",
+      image: "./imagenes/n1.webp",
     },
     {
       productName: "BIOAMINO-L X 20 LTS",
       category: "Agroquimicos",
       price: "$30.00",
-      image: "./imagenes/n2.png",
+      image: "./imagenes/n2.webp",
     },
     //----- SEGUNDA CATEGORIA */
     {
       productName: "TRIADA FOLIAR 18-28-8 KG",
       category: "Acidificantes con Indicador de ph",
       price: "$25.00",
-      image: "./imagenes/pro5.jpg",
+      image: "./imagenes/pro5.webp",
     },
     {
       productName: "ARIADA FOLIAR 18-28-8 X 10 KG",
       category: "Acidificantes con Indicador de ph",
       price: "$60.00",
-      image: "./imagenes/pro6.jpg",
+      image: "./imagenes/pro6.webp",
     },
     {
       productName: "TRIADA FOLIAR 18-45-0 KG",
       category: "Acidificantes con Indicador de ph",
       price: "$20.00",
-      image: "./imagenes/pro66.png",
+      image: "./imagenes/pro66.webp",
     },
     //----- TERCERA CATEGORIA */
     {
       productName: "KELP WAY FULVICO X 200 LT",
       category: "Ácido Húmico",
       price: "$25.00",
-      image: "./imagenes/pro7.jpg",
+      image: "./imagenes/pro7.webp",
     },
     {
       productName: "KELP WAY HUMICO TECH X 1 LT",
       category: "Ácido Húmico",
       price: "$20.00",
-      image: "./imagenes/pro8.jpg",
+      image: "./imagenes/pro8.webp",
     },
     {
       productName: "KELP WAY HUMIKELP X 1LT",
       category: "Ácido Húmico",
       price: "$18.00",
-      image: "./imagenes/pro9.jpg",
+      image: "./imagenes/pro9.webp",
     },
 
     //----- CUARTA CATEGORIA */
@@ -321,7 +321,7 @@ let products = {
       productName: "KELP WAY HUMIKELP X 1LT",
       category: "Ácido Húmico",
       price: "$18.00",
-      image: "./imagenes/pro9.jpg",
+      image: "./imagenes/pro9.webp",
     },
 
   ]

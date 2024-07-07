@@ -11,7 +11,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image:url("imagenes/fondo.jpg");
+    background-image:url("imagenes/fondo.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -166,7 +166,7 @@ header {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: url("imagenes/fondo.jpg");
+    background-image: url("imagenes/fondo.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
