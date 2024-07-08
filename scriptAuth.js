@@ -27,7 +27,7 @@ const analytics = getAnalytics(app);
 const registroForm = document.getElementById("registroForm");
 
 //Declaro Datos
-const inputtipoDocument = document.getElementById("tipoDocumento");
+const inputtipoDocumento = document.getElementById("tipoDocumento");
 const inputnumeroDocumento = document.getElementById("numeroDocumento");
 const inputnombres = document.getElementById("nombres");
 const inputapellidoPaterno = document.getElementById("apellidoPaterno");
@@ -39,7 +39,7 @@ const inputconfirmarContrasena = document.getElementById("confirmarContrasena");
 registroForm.addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    const tipoDocumento = inputtipoDocument.value;
+    const tipoDocumento = inputtipoDocumento.value;
     const numeroDocumento = inputnumeroDocumento.value;
     const nombres = inputnombres.value;
     const apellidoPaterno = inputapellidoPaterno.value;

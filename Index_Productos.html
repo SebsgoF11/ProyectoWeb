@@ -1,111 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Página</title>
-    
-    <!-- font awesome cdn link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    
-    <!-- Custom CSS file link -->
-    <link rel="stylesheet" href="styleProductos.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Jost:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Tu Página</title>
+
+   <!-- font awesome cdn link -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+   <!-- Custom CSS file link -->
+   <link rel="stylesheet" href="styleProductos.css">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css?family=Jost:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet">
 </head>
+
 <body>
-    <!--para la parte del menu-->
-    <header>
-      <a href="#" class="logo"><img src="imagenes/logo1.png" alt="Logo"></a>
+   <!--para la parte del menu-->
+   <header>
+      <a href="#" class="logo"><img src="imagenes/logo1.webp" alt="Logo"></a>
       <ul class="navmenu">
-          <li><a href="Index_Inicio.html" style="color: black; font-weight: bold;">INICIO</a></li>
-          <li><a href="Index_Nosotros.html" style="color: black; font-weight: bold;">NOSOTROS</a></li>
-          <li><a href="Index_Productos.html" style="color: black; font-weight: bold;">PRODUCTOS</a></li>
-          <li><a href="Index_Novedades.html" style="color: black; font-weight: bold;">NOVEDADES</a></li>
-          <li><a href="Index_Accesos.html" style="color: black; font-weight: bold;">ACCESOS</a></li>
+         <li><a href="Index_Inicio.html" style="color: black; font-weight: bold;">INICIO</a></li>
+         <li><a href="Index_Nosotros.html" style="color: black; font-weight: bold;">NOSOTROS</a></li>
+         <li><a href="Index_Productos.html" style="color: black; font-weight: bold;">PRODUCTOS</a></li>
+         <li><a href="Index_Novedades.html" style="color: black; font-weight: bold;">NOVEDADES</a></li>
+         <li><a href="Index_Accesos.html" style="color: black; font-weight: bold;">ACCESOS</a></li>
       </ul>
 
       <div class="container_bus">
-          <input type="text" id="searchInput" placeholder="Buscar">
-          <div class="btn" id="searchBtn">
-              <i class="fa fa-search"></i>
-          </div>
+         <input type="text" id="searchInput" placeholder="Buscar">
+         <div class="btn" id="searchBtn">
+            <i class="fa fa-search"></i>
+         </div>
       </div>
-      
+
       <div class="nav-icon">
-          <i class="bx bx-user"></i>
+         <i class="bx bx-user"></i>
       </div>
 
-<!-- icono de carrito -->
-<div class="carrito-icono" id="carrito-icono" onclick="mostrarCarrito()">
-   <i class="fas fa-cart-arrow-down" style="font-size: 18px;"></i>
-   <span class="badge" id="cart-count">0</span>
-</div>
+      <!-- icono de carrito -->
+      <div class="carrito-icono" id="carrito-icono" onclick="mostrarCarrito()">
+         <i class="fas fa-cart-arrow-down" style="font-size: 18px;"></i>
+         <span class="badge" id="cart-count">0</span>
+      </div>
 
-<!-- Carrito de compras -->
-<div class="carrito" id="carrito">
-   <p class="close-btn" onclick="ocultarCarrito()">x</p>
-   <h3>Tu Carrito</h3>
-   <div class="lista-carrito" id="lista-carrito"></div>
-   <h2>Tu Total: $<strong class="price-total" id="total">0.00</strong></h2>
-   <button onclick="realizarPago()">Pagar</button>
-</div>
-  <div class="capa"></div>
+      <!-- Carrito de compras -->
+      <div class="carrito" id="carrito">
+         <p class="close-btn" onclick="ocultarCarrito()">x</p>
+         <h3>Tu Carrito</h3>
+         <div class="lista-carrito" id="lista-carrito"></div>
+         <h2>Tu Total: $<strong class="price-total" id="total">0.00</strong></h2>
+         <button class="pagar-btn" onclick="realizarPago()">Pagar</button>
+
+      </div>
+      <div class="capa"></div>
       <input type="checkbox" id="btn-menu">
       <label for="btn-menu" class="menu-icon">☰</label>
       <div class="container-menu">
-          <div class="cont-menu">
-              <label for="btn-menu">✖️</label>
-              <nav>
-                  <a href="#">Portafolio</a>
-                  <a href="#">Servicios</a>
-                  <a href="#">Suscribirse</a>
-                  <a href="#">Facebook</a>
-                  <a href="#">Youtube</a>
-                  <a href="#">Instagram</a>
-              </nav>
-          </div>
+         <div class="cont-menu">
+            <label for="btn-menu">✖️</label>
+            <nav>
+               <a href="#">Portafolio</a>
+               <a href="#">Servicios</a>
+               <a href="#">Suscribirse</a>
+               <a href="#">Facebook</a>
+               <a href="#">Youtube</a>
+               <a href="#">Instagram</a>
+            </nav>
+         </div>
       </div>
-  </header>
+   </header>
 
-  <section class="main-home">
+   <section class="main-home">
       <div class="main-text">
-          <br><br><br><br>
-          <h5>¡Descubre lo Mejor de Procampo!</h5>
-          <h1>¡Exclusiva Venta de los mejores<br> Productos Procampo!</h1>
-          <p>¡Sumérgete en la Excelencia y Calidad!</p>
-          <a href="#" class="main-btn">Comprar <i class="bx bx-right-arrow-alt"></i></a>
+         <br><br><br><br>
+         <h5>¡Descubre lo Mejor de Procampo!</h5>
+         <h1>¡Exclusiva Venta de los mejores<br> Productos Procampo!</h1>
+         <p>¡Sumérgete en la Excelencia y Calidad!</p>
+         <a href="#" class="main-btn">Comprar <i class="bx bx-right-arrow-alt"></i></a>
       </div>
       <div class="down-arrow">
-          <a href="#trending" class="down"><i class='bx bx-down-arrow-alt'></i></a>
+         <a href="#trending" class="down"><i class='bx bx-down-arrow-alt'></i></a>
       </div>
       <div id="trending" style="margin-top: 33.5vh; padding: 20px;"></div>
-  </section>
+   </section>
 
-  <!--para botones de categoria-->
-  <div class="container-button">
+   <!--para botones de categoria-->
+   <div class="container-button">
       <h1>LOS DIFERENTES PRODUCTOS QUE TENEMOS PARA TI</h1>
 
       <div class="wrapper">
-          <div id="search-container">
-              <input type="search" id="search-input" placeholder="Buscar....">
-              <button id="search">Buscar</button>
-          </div>
+         <div id="search-container">
+            <form action="BusquedaProductos.php" method="POST">
+               <input type="search" id="search-input" name="query" placeholder="Buscar....">
+               <button type="submit" id="search">Buscar</button>
+            </form>
 
-          <div class="filter_buttons">
-              <button onclick="setActive(this, 'all')">MOSTRAR TODAS LAS CATEGORIAS</button>
-              <button onclick="setActive(this, 'container')">AGROQUÍMICOS</button>
-              <button onclick="setActive(this, 'container_2')">ACIDIFICANTES CON INDICADOR DE PH</button>
-              <button onclick="setActive(this, 'container_3')">ÁCIDO HÚMICO</button>
-              <button onclick="setActive(this, 'container_4')">ADHERENTES SURFACTANTES HUMECTANTES</button>
-              <button onclick="setActive(this, 'container_5')">BIOESTIMULANTES</button>
-              <button onclick="setActive(this, 'container_6')">FERTILIZANTES FOLIARES</button>
-          </div>
+            
+
+         </div>
+
+         <div class="filter-buttons">
+            <button onclick="setActiveCategory(this, 'all')">MOSTRAR TODAS LAS CATEGORIAS</button>
+            <button onclick="setActiveCategory(this, 'container')">AGROQUÍMICOS</button>
+            <button onclick="setActiveCategory(this, 'container_2')">ACIDIFICANTES CON INDICADOR DE PH</button>
+            <button onclick="setActiveCategory(this, 'container_3')">ÁCIDO HÚMICO</button>
+            <button onclick="setActiveCategory(this, 'container_4')">ADHERENTES SURFACTANTES HUMECTANTES</button>
+            <button onclick="setActiveCategory(this, 'container_5')">BIOESTIMULANTES</button>
+            <button onclick="setActiveCategory(this, 'container_6')">FERTILIZANTES FOLIARES</button>
+         </div>
       </div>
    </div>
 
@@ -115,189 +126,191 @@
    <div class="container">
       <h3 class="title">Agroquímicos</h3>
       <div class="products-container">
-          <div class="product" data-name="p-1">
-              <img src="./imagenes/pro1.jpg" alt="AMINOTERRA GREEN X 20 LT">
-              <h3>AMINOTERRA GREEN X 20 LT</h3>
-              <div class="price">$25.00</div>
-             
-          </div>
+         <div class="product" data-name="p-1">
+            <img src="./imagenes/pro1.webp" alt="AMINOTERRA GREEN X 20 LT">
+            <h3>AMINOTERRA GREEN X 20 LT</h3>
+            <div class="price">$25.00</div>
 
-          <div class="product" data-name="p-2">
-              <img src="./imagenes/pro2.jpg" alt="AMINOTERRA PLUS ZN X 20 LTS">
-              <h3>AMINOTERRA PLUS ZN X 20 LTS</h3>
-              <div class="price">$20.00</div>
-          </div>
+         </div>
 
-          <div class="product" data-name="p-3">
-              <img src="./imagenes/pro3.jpg" alt="ESCUDERO X 1 LT">
-              <h3>ESCUDERO X 1 LT</h3>
-              <div class="price">$18.00</div>
-          </div>
+         <div class="product" data-name="p-2">
+            <img src="./imagenes/pro2.webp" alt="AMINOTERRA PLUS ZN X 20 LTS">
+            <h3>AMINOTERRA PLUS ZN X 20 LTS</h3>
+            <div class="price">$20.00</div>
+         </div>
 
-          <div class="product" data-name="p-4">
-              <img src="./imagenes/pro4.jpg" alt="KELP WAY ALGAE X 1 LT">
-              <h3>KELP WAY ALGAE X 1 LT</h3>
-              <div class="price">$30.00</div>
-          </div>
+         <div class="product" data-name="p-3">
+            <img src="./imagenes/pro3.webp" alt="ESCUDERO X 1 LT">
+            <h3>ESCUDERO X 1 LT</h3>
+            <div class="price">$18.00</div>
+         </div>
 
-          <div class="product" data-name="p-5">
-              <img src="./imagenes/n1.png" alt="BIOIL-S (ENHANCE) X 20 LT">
-              <h3>BIOIL-S (ENHANCE) X 20 LT</h3>
-              <div class="price">$30.00</div>
-          </div>
+         <div class="product" data-name="p-4">
+            <img src="./imagenes/pro4.webp" alt="KELP WAY ALGAE X 1 LT">
+            <h3>KELP WAY ALGAE X 1 LT</h3>
+            <div class="price">$30.00</div>
+         </div>
 
-          <div class="product" data-name="p-6">
-              <img src="./imagenes/n2.png" alt="BIOAMINO-L X 20 LTS">
-              <h3>BIOAMINO-L X 20 LTS</h3>
-              <div class="price">$30.00</div>
-          </div>
+         <div class="product" data-name="p-5">
+            <img src="./imagenes/n1.webp" alt="BIOIL-S (ENHANCE) X 20 LT">
+            <h3>BIOIL-S (ENHANCE) X 20 LT</h3>
+            <div class="price">$30.00</div>
+         </div>
+
+         <div class="product" data-name="p-6">
+            <img src="./imagenes/n2.webp" alt="BIOAMINO-L X 20 LTS">
+            <h3>BIOAMINO-L X 20 LTS</h3>
+            <div class="price">$30.00</div>
+         </div>
       </div>
-  </div>
+   </div>
 
-  <div class="products-preview">
+   <div class="products-preview">
       <div class="preview" data-target="p-1">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/pro1.jpg" alt="AMINOTERRA PLUS ZN X 20 LTS">
+         <img src="./imagenes/pro1.webp" alt="AMINOTERRA PLUS ZN X 20 LTS">
          <h3>AMINOTERRA GREEN X 20 LT</h3>
          <div class="stars">
-             <i class="fas fa-star"></i>
-             <i class="fas fa-star"></i>
-             <i class="fas fa-star"></i>
-             <i class="fas fa-star"></i>
-             <i class="fas fa-star-half-alt"></i>
-             <span>( 250 )</span>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
          </div>
          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
          <div class="price">$25.00</div>
          <div class="buttons">
-             <a href="#" class="buy">buy now</a>
-             <a href="#" data-id="40" class="cart" >add to cart</a>
+            <a href="#" class="buy">buy now</a>
+            <a href="#" data-id="40" class="cart">add to cart</a>
          </div>
-     </div>
+      </div>
 
       <div class="preview" data-target="p-2">
-          <i class="fas fa-times"></i>
-          <img src="./imagenes/pro2.jpg" alt="AMINOTERRA PLUS ZN X 20 LTS">
-          <h3>AMINOTERRA PLUS ZN X 20 LTS</h3>
-          <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-              <span>( 250 )</span>
-          </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
-          <div class="price">$20.00</div>
-          <div class="buttons">
-              <a href="#" class="buy">buy now</a>
-              <a href="#" data-id="2" class="cart" >add to cart</a>
-          </div>
+         <i class="fas fa-times"></i>
+         <img src="./imagenes/pro2.webp" alt="AMINOTERRA PLUS ZN X 20 LTS">
+         <h3>AMINOTERRA PLUS ZN X 20 LTS</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+         <div class="price">$20.00</div>
+         <div class="buttons">
+            <a href="#" class="buy">buy now</a>
+            <a href="#" data-id="2" class="cart">add to cart</a>
+         </div>
       </div>
 
       <div class="preview" data-target="p-3">
-          <i class="fas fa-times"></i>
-          <img src="./imagenes/pro3.jpg" alt="ESCUDERO X 1 LT">
-          <h3>ESCUDERO X 1 LT</h3>
-          <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-              <span>( 250 )</span>
-          </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
-          <div class="price">$18.00</div>
-          <div class="buttons">
-              <a href="#" class="buy">buy now</a>
-              <a href="#" data-id="3" class="cart" >add to cart</a>
-          </div>
+         <i class="fas fa-times"></i>
+         <img src="./imagenes/pro3.webp" alt="ESCUDERO X 1 LT">
+         <h3>ESCUDERO X 1 LT</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+         <div class="price">$18.00</div>
+         <div class="buttons">
+            <a href="#" class="buy">buy now</a>
+            <a href="#" data-id="3" class="cart">add to cart</a>
+         </div>
       </div>
 
       <div class="preview" data-target="p-4">
-          <i class="fas fa-times"></i>
-          <img src="./imagenes/pro4.jpg" alt="KELP WAY ALGAE X 1 LT">
-          <h3>KELP WAY ALGAE X 1 LT</h3>
-          <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-              <span>( 250 )</span>
-          </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
-          <div class="price">$30.00</div>
-          <div class="buttons">
-              <a href="#" class="buy">buy now</a>
-              <a href="#" data-id="4" class="cart" >add to cart</a>
-          </div>
+         <i class="fas fa-times"></i>
+         <img src="./imagenes/pro4.webp" alt="KELP WAY ALGAE X 1 LT">
+         <h3>KELP WAY ALGAE X 1 LT</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+         <div class="price">$30.00</div>
+         <div class="buttons">
+            <a href="#" class="buy">buy now</a>
+            <a href="#" data-id="4" class="cart">add to cart</a>
+         </div>
       </div>
 
       <div class="preview" data-target="p-5">
-          <i class="fas fa-times"></i>
-          <img src="./imagenes/n1.png" alt="BIOIL-S (ENHANCE) X 20 LT">
-          <h3>BIOIL-S (ENHANCE) X 20 LT</h3>
-          <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-              <span>( 250 )</span>
-          </div>
-          <p>Aceite natural, obtenido del salmón, con propiedades únicas que promueven el desarrollo de defensa en las plantas.</p>
-          <div class="price">$30.00</div>
-          <div class="buttons">
-              <a href="#" class="buy">buy now</a>
-              <a href="#" data-id="5" class="cart" >add to cart</a>
-          </div>
+         <i class="fas fa-times"></i>
+         <img src="./imagenes/n1.webp" alt="BIOIL-S (ENHANCE) X 20 LT">
+         <h3>BIOIL-S (ENHANCE) X 20 LT</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <p>Aceite natural, obtenido del salmón, con propiedades únicas que promueven el desarrollo de defensa en las
+            plantas.</p>
+         <div class="price">$30.00</div>
+         <div class="buttons">
+            <a href="#" class="buy">buy now</a>
+            <a href="#" data-id="5" class="cart">add to cart</a>
+         </div>
       </div>
 
       <div class="preview" data-target="p-6">
-          <i class="fas fa-times"></i>
-          <img src="./imagenes/n2.png" alt="BIOAMINO-L X 20 LTS">
-          <h3>BIOAMINO-L X 20 LTS</h3>
-          <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-              <span>( 250 )</span>
-          </div>
-          <p>Sus péptidos y polipéptidos de bajo peso molecular, favoreciendo el desarrollo de micro y macroorganismos benéficos.</p>
-          <div class="price">$30.00</div>
-          <div class="buttons">
-              <a href="#" class="buy">buy now</a>
-              <a href="#" data-id="6" class="cart" >add to cart</a>
-          </div>
+         <i class="fas fa-times"></i>
+         <img src="./imagenes/n2.webp" alt="BIOAMINO-L X 20 LTS">
+         <h3>BIOAMINO-L X 20 LTS</h3>
+         <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>( 250 )</span>
+         </div>
+         <p>Sus péptidos y polipéptidos de bajo peso molecular, favoreciendo el desarrollo de micro y macroorganismos
+            benéficos.</p>
+         <div class="price">$30.00</div>
+         <div class="buttons">
+            <a href="#" class="buy">buy now</a>
+            <a href="#" data-id="6" class="cart">add to cart</a>
+         </div>
       </div>
-  </div>
- 
+   </div>
+
    <!--segunda categoria-->
-  
+
 
    <div class="container_2">
-      
+
       <h3 class="title">Acidificantes con Indicador de ph</h3>
 
       <div class="products-container">
          <div class="product" data-name="p-7">
-            <img src="./imagenes/pro5.jpg" alt="">
+            <img src="./imagenes/pro5.webp" alt="">
             <h3>TRIADA FOLIAR 18-28-8 KG </h3>
             <div class="price">$25.00</div>
          </div>
 
          <div class="product" data-name="p-8">
-            <img src="./imagenes/pro6.jpg" alt="">
+            <img src="./imagenes/pro6.webp" alt="">
             <h3>TRIADA FOLIAR 18-28-8 X 10 KG </h3>
             <div class="price">$60.00</div>
          </div>
 
          <div class="product" data-name="p-9">
-            <img src="./imagenes/pro66.png" alt="">
+            <img src="./imagenes/pro66.webp" alt="">
             <h3>TRIADA FOLIAR 18-45-0 KG</h3>
             <div class="price">$20.00</div>
          </div>
@@ -307,7 +320,7 @@
    <div class="products-preview_2">
       <div class="preview" data-target="p-7">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/pro5.jpg" alt="">
+         <img src="./imagenes/pro5.webp" alt="">
          <h3>TRIADA FOLIAR 18-28-8 KG</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -327,7 +340,7 @@
 
       <div class="preview" data-target="p-8">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/pro6.jpg" alt="">
+         <img src="./imagenes/pro6.webp" alt="">
          <h3>TRIADA FOLIAR 18-28-8 X 10 KG</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -347,7 +360,7 @@
 
       <div class="preview" data-target="p-9">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/pro66.png" alt="">
+         <img src="./imagenes/pro66.webp" alt="">
          <h3>TRIADA FOLIAR 18-45-0 KG</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -373,19 +386,19 @@
       <h3 class="title">Ácido Húmico</h3>
       <div class="products-container">
          <div class="product" data-name="p-10">
-            <img src="./imagenes/pro7.jpg" alt="">
+            <img src="./imagenes/pro7.webp" alt="">
             <h3>KELP WAY FULVICO X 200 LT</h3>
             <div class="price">$25.00</div>
          </div>
 
          <div class="product" data-name="p-11">
-            <img src="./imagenes/pro8.jpg" alt="">
+            <img src="./imagenes/pro8.webp" alt="">
             <h3>KELP WAY HUMICO TECH X 1 LT</h3>
             <div class="price">$20.00</div>
          </div>
 
          <div class="product" data-name="p-12">
-            <img src="./imagenes/pro9.jpg" alt="">
+            <img src="./imagenes/pro9.webp" alt="">
             <h3>KELP WAY HUMIKELP X 1LT</h3>
             <div class="price">$18.00</div>
          </div>
@@ -397,7 +410,7 @@
 
       <div class="preview" data-target="p-10">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/pro7.jpg" alt="">
+         <img src="./imagenes/pro7.webp" alt="">
          <h3>KELP WAY FULVICO X 200 LT</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -418,7 +431,7 @@
 
       <div class="preview" data-target="p-11">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/pro8.jpg" alt="">
+         <img src="./imagenes/pro8.webp" alt="">
          <h3>KELP WAY HUMICO TECH X 1 LT</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -438,7 +451,7 @@
 
       <div class="preview" data-target="p-12">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/pro9.jpg" alt="">
+         <img src="./imagenes/pro9.webp" alt="">
          <h3>KELP WAY HUMIKELP X 1LT</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -464,37 +477,37 @@
       <h3 class="title">Adherentes Surfactantes Humectantes</h3>
       <div class="products-container">
          <div class="product" data-name="p-13">
-            <img src="./imagenes/p1.png" alt="">
+            <img src="./imagenes/p1.webp" alt="">
             <h3>KELP WAY STICK X 20 LT</h3>
             <div class="price">$25.00</div>
          </div>
 
          <div class="product" data-name="p-38">
-            <img src="./imagenes/p26.png" alt="">
+            <img src="./imagenes/p26.webp" alt="">
             <h3>TRIADA CITOPLEX X 4 LT</h3>
             <div class="price">$30.00</div>
          </div>
 
          <div class="product" data-name="p-14">
-            <img src="./imagenes/p2.png" alt="">
+            <img src="./imagenes/p2.webp" alt="">
             <h3>TRIADA CITOPLEX X 20 LT</h3>
             <div class="price">$20.00</div>
          </div>
 
          <div class="product" data-name="p-15">
-            <img src="./imagenes/p3.png" alt="">
+            <img src="./imagenes/p3.webp" alt="">
             <h3>TRIADA FOLIAR 0-32-43 KG</h3>
             <div class="price">$18.00</div>
          </div>
 
          <div class="product" data-name="p-16">
-            <img src="./imagenes/p4.png" alt="">
+            <img src="./imagenes/p4.webp" alt="">
             <h3>TRIADA QUEL BORO X 0.5 KG</h3>
             <div class="price">$18.00</div>
          </div>
 
          <div class="product" data-name="p-17">
-            <img src="./imagenes/p5.png" alt="">
+            <img src="./imagenes/p5.webp" alt="">
             <h3>TRIADA QUEL MN X 10 KG</h3>
             <div class="price">$18.00</div>
          </div>
@@ -506,7 +519,7 @@
 
       <div class="preview" data-target="p-13">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p1.png" alt="">
+         <img src="./imagenes/p1.webp" alt="">
          <h3>KELP WAY FULVICO X 200 LT</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -526,7 +539,7 @@
       </div>
       <div class="preview" data-target="p-38">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p26.png" alt="">
+         <img src="./imagenes/p26.webp" alt="">
          <h3>TRIADA CITOPLEX X 4 LT</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -546,7 +559,7 @@
 
       <div class="preview" data-target="p-14">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p2.png" alt="">
+         <img src="./imagenes/p2.webp" alt="">
          <h3>TRIADA CITOPLEX X 20 LT</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -561,13 +574,13 @@
          <div class="price">$20.00</div>
          <div class="buttons">
             <a href="#" class="buy">buy now</a>
-            <a href="#" data-id="14"class="cart">add to cart</a>
+            <a href="#" data-id="14" class="cart">add to cart</a>
          </div>
       </div>
 
       <div class="preview" data-target="p-15">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p3.png" alt="">
+         <img src="./imagenes/p3.webp" alt="">
          <h3>TRIADA FOLIAR 0-32-43 KG</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -581,12 +594,12 @@
          <div class="price">$18.00</div>
          <div class="buttons">
             <a href="#" class="buy">buy now</a>
-            <a href="#"data-id="15" class="cart">add to cart</a>
+            <a href="#" data-id="15" class="cart">add to cart</a>
          </div>
       </div>
       <div class="preview" data-target="p-16">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p3.png" alt="">
+         <img src="./imagenes/p3.webp" alt="">
          <h3>TRIADA QUEL BORO X 0.5 KG</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -605,7 +618,7 @@
       </div>
       <div class="preview" data-target="p-17">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p5.png" alt="">
+         <img src="./imagenes/p5.webp" alt="">
          <h3>TRIADA QUEL MN X 10 KG</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -631,55 +644,55 @@
       <h3 class="title">Bioestimulantes </h3>
       <div class="products-container">
          <div class="product" data-name="p-18">
-            <img src="./imagenes/p6.png" alt="">
+            <img src="./imagenes/p6.webp" alt="">
             <h3>KELP WAY CITOKIN X LT</h3>
             <div class="price">$25.00</div>
          </div>
 
          <div class="product" data-name="p-19">
-            <img src="./imagenes/p7.png" alt="">
+            <img src="./imagenes/p7.webp" alt="">
             <h3>KELP WAY DEFENSE K84 X 20LT</h3>
             <div class="price">$20.00</div>
          </div>
 
          <div class="product" data-name="p-20">
-            <img src="./imagenes/p8.png" alt="">
+            <img src="./imagenes/p8.webp" alt="">
             <h3>TRIADA QUEL CU X 10 KG</h3>
             <div class="price">$18.00</div>
          </div>
 
          <div class="product" data-name="p-21">
-            <img src="./imagenes/p9.png" alt="">
+            <img src="./imagenes/p9.webp" alt="">
             <h3>TRIADA QUEL MG X 1 KG</h3>
             <div class="price">$18.00</div>
          </div>
 
          <div class="product" data-name="p-22">
-            <img src="./imagenes/p10.png" alt="">
+            <img src="./imagenes/p10.webp" alt="">
             <h3>TRIADA QUEL ZN X 1 KG</h3>
             <div class="price">$18.00</div>
          </div>
 
          <div class="product" data-name="p-23">
-            <img src="./imagenes/p11.png" alt="">
+            <img src="./imagenes/p11.webp" alt="">
             <h3>TRIADA R 14-8-19 X 1 KG</h3>
             <div class="price">$18.00</div>
          </div>
 
          <div class="product" data-name="p-39">
-            <img src="./imagenes/p11.png" alt="">
+            <img src="./imagenes/p11.webp" alt="">
             <h3>TRIADA R 14-8-19 X 12 KG</h3>
             <div class="price">$68.00</div>
          </div>
 
          <div class="product" data-name="p-24">
-            <img src="./imagenes/p12.png" alt="">
+            <img src="./imagenes/p12.webp" alt="">
             <h3>TRIADA-FLUX 411F X 20 LT</h3>
             <div class="price">$18.00</div>
          </div>
 
          <div class="product" data-name="p-25">
-            <img src="./imagenes/p13.png" alt="">
+            <img src="./imagenes/p13.webp" alt="">
             <h3>TRIADAMIN X 1 LT</h3>
             <div class="price">$18.00</div>
          </div>
@@ -691,7 +704,7 @@
 
       <div class="preview" data-target="p-18">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p6.png" alt="">
+         <img src="./imagenes/p6.webp" alt="">
          <h3>KELP WAY CITOKIN X LT</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -712,7 +725,7 @@
 
       <div class="preview" data-target="p-19">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p7.png" alt="">
+         <img src="./imagenes/p7.webp" alt="">
          <h3>KELP WAY DEFENSE K84 X 20LT</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -732,7 +745,7 @@
 
       <div class="preview" data-target="p-20">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p8.png" alt="">
+         <img src="./imagenes/p8.webp" alt="">
          <h3>TRIADA QUEL CU X 10 KG</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -746,12 +759,12 @@
          <div class="price">$18.00</div>
          <div class="buttons">
             <a href="#" class="buy">buy now</a>
-            <a href="#"data-id="20" class="cart">add to cart</a>
+            <a href="#" data-id="20" class="cart">add to cart</a>
          </div>
       </div>
       <div class="preview" data-target="p-21">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p9.png" alt="">
+         <img src="./imagenes/p9.webp" alt="">
          <h3>TRIADA QUEL MG X 1 KG</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -771,7 +784,7 @@
 
       <div class="preview" data-target="p-22">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p10.png" alt="">
+         <img src="./imagenes/p10.webp" alt="">
          <h3>TRIADA QUEL ZN X 1 KG</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -791,7 +804,7 @@
 
       <div class="preview" data-target="p-39">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p11.png" alt="">
+         <img src="./imagenes/p11.webp" alt="">
          <h3>TRIADA R 14-8-19 X 12 KG</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -812,7 +825,7 @@
 
       <div class="preview" data-target="p-23">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p11.png" alt="">
+         <img src="./imagenes/p11.webp" alt="">
          <h3>TRIADA R 14-8-19 X 1 KG</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -826,12 +839,12 @@
          <div class="price">$18.00</div>
          <div class="buttons">
             <a href="#" class="buy">buy now</a>
-            <a href="#" data-id="23"  class="cart">add to cart</a>
+            <a href="#" data-id="23" class="cart">add to cart</a>
          </div>
       </div>
       <div class="preview" data-target="p-24">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p12.png" alt="">
+         <img src="./imagenes/p12.webp" alt="">
          <h3>TRIADA-FLUX 411F X 20 LT</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -851,7 +864,7 @@
 
       <div class="preview" data-target="p-25">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p13.png" alt="">
+         <img src="./imagenes/p13.webp" alt="">
          <h3>TRIADAMIN X 1 LT</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -865,7 +878,7 @@
          <div class="price">$18.00</div>
          <div class="buttons">
             <a href="#" class="buy">buy now</a>
-            <a href="#" data-id="25"  class="cart">add to cart</a>
+            <a href="#" data-id="25" class="cart">add to cart</a>
          </div>
       </div>
    </div>
@@ -877,73 +890,73 @@
       <h3 class="title">Fertilizantes Foliares </h3>
       <div class="products-container">
          <div class="product" data-name="p-26">
-            <img src="./imagenes/p14.png" alt="">
+            <img src="./imagenes/p14.webp" alt="">
             <h3>OPTIMUS FE X 1 KG</h3>
             <div class="price">$25.00</div>
          </div>
 
          <div class="product" data-name="p-27">
-            <img src="./imagenes/p15.png" alt="">
+            <img src="./imagenes/p15.webp" alt="">
             <h3>RADIFLEX X 1 LT</h3>
             <div class="price">$20.00</div>
          </div>
 
          <div class="product" data-name="p-28">
-            <img src="./imagenes/p16.png" alt="">
+            <img src="./imagenes/p16.webp" alt="">
             <h3>TRIADA AGUAS X 1 KG</h3>
             <div class="price">$18.00</div>
          </div>
 
          <div class="product" data-name="p-29">
-            <img src="./imagenes/p17.png" alt="">
+            <img src="./imagenes/p17.webp" alt="">
             <h3>TRIADA IN X 4 LT</h3>
             <div class="price">$18.00</div>
          </div>
 
          <div class="product" data-name="p-30">
-            <img src="./imagenes/p18.png" alt="">
+            <img src="./imagenes/p18.webp" alt="">
             <h3>TRIADA MADURADOR X 10 KG</h3>
             <div class="price">$18.00</div>
          </div>
 
          <div class="product" data-name="p-31">
-            <img src="./imagenes/p19.png" alt="">
+            <img src="./imagenes/p19.webp" alt="">
             <h3>TRIADA QUEL BALANCE X 1 KG</h3>
             <div class="price">$18.00</div>
          </div>
 
          <div class="product" data-name="p-32">
-            <img src="./imagenes/p20.png" alt="">
+            <img src="./imagenes/p20.webp" alt="">
             <h3>TRIADA QUEL CA X 10 KG</h3>
             <div class="price">$18.00</div>
          </div>
 
          <div class="product" data-name="p-33">
-            <img src="./imagenes/p21.png" alt="">
+            <img src="./imagenes/p21.webp" alt="">
             <h3>TRIADA-FLUX 411F X 4 LT</h3>
             <div class="price">$18.00</div>
          </div>
 
          <div class="product" data-name="p-34">
-            <img src="./imagenes/p22.png" alt="">
+            <img src="./imagenes/p22.webp" alt="">
             <h3>TRIADA-OIL EMULSION X 1 LT</h3>
             <div class="price">$20.00</div>
          </div>
 
          <div class="product" data-name="p-35">
-            <img src="./imagenes/p23.png" alt="">
+            <img src="./imagenes/p23.webp" alt="">
             <h3>TRIADA-OIL EMULSION X 20 LT</h3>
             <div class="price">$18.00</div>
          </div>
 
          <div class="product" data-name="p-36">
-            <img src="./imagenes/p24.png" alt="">
+            <img src="./imagenes/p24.webp" alt="">
             <h3>TRIADA-OIL EMULSION X 200 LT</h3>
             <div class="price">$58.00</div>
          </div>
 
          <div class="product" data-name="p-37">
-            <img src="./imagenes/p25.png" alt="">
+            <img src="./imagenes/p25.webp" alt="">
             <h3>TRIADAMIN X 20 LT</h3>
             <div class="price">$58.00</div>
          </div>
@@ -956,7 +969,7 @@
 
       <div class="preview" data-target="p-26">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p14.png" alt="">
+         <img src="./imagenes/p14.webp" alt="">
          <h3>OPTIMUS FE X 1 KG</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -977,7 +990,7 @@
 
       <div class="preview" data-target="p-27">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p15.png" alt="">
+         <img src="./imagenes/p15.webp" alt="">
          <h3>RADIFLEX X 1 LT</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -997,7 +1010,7 @@
 
       <div class="preview" data-target="p-28">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p16.png" alt="">
+         <img src="./imagenes/p16.webp" alt="">
          <h3>TRIADA AGUAS X 1 KG</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -1016,7 +1029,7 @@
       </div>
       <div class="preview" data-target="p-29">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p17.png" alt="">
+         <img src="./imagenes/p17.webp" alt="">
          <h3>TRIADA IN X 4 LT</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -1036,7 +1049,7 @@
       </div>
       <div class="preview" data-target="p-30">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p18.png" alt="">
+         <img src="./imagenes/p18.webp" alt="">
          <h3>TRIADA MADURADOR X 10 KG</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -1056,7 +1069,7 @@
 
       <div class="preview" data-target="p-31">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p19.png" alt="">
+         <img src="./imagenes/p19.webp" alt="">
          <h3>TRIADA QUEL BALANCE X 1 KG</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -1075,7 +1088,7 @@
       </div>
       <div class="preview" data-target="p-32">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p20.png" alt="">
+         <img src="./imagenes/p20.webp" alt="">
          <h3>TRIADA QUEL CA X 10 KG</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -1095,7 +1108,7 @@
 
       <div class="preview" data-target="p-33">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p21.png" alt="">
+         <img src="./imagenes/p21.webp" alt="">
          <h3>TRIADA-FLUX 411F X 4 LT</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -1115,7 +1128,7 @@
 
       <div class="preview" data-target="p-34">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p22.png" alt="">
+         <img src="./imagenes/p22.webp" alt="">
          <h3>TRIADA-OIL EMULSION X 1 LT</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -1135,7 +1148,7 @@
 
       <div class="preview" data-target="p-35">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p23.png" alt="">
+         <img src="./imagenes/p23.webp" alt="">
          <h3>TRIADA-OIL EMULSION X 20 LT</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -1155,7 +1168,7 @@
 
       <div class="preview" data-target="p-36">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p24.png" alt="">
+         <img src="./imagenes/p24.webp" alt="">
          <h3>TRIADA-OIL EMULSION X 200 LT</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -1175,7 +1188,7 @@
 
       <div class="preview" data-target="p-37">
          <i class="fas fa-times"></i>
-         <img src="./imagenes/p25.png" alt="">
+         <img src="./imagenes/p25.webp" alt="">
          <h3>TRIADAMIN X 20 LT</h3>
          <div class="stars">
             <i class="fas fa-star"></i>
@@ -1195,240 +1208,240 @@
    </div>
    <br><br> <br> <br> <br>
 
-  
-  <!-- contactos -->
-  <footer class="footer">
-   <div class="container">
-      <h1>PROCAMPO</h1>
-      <div class="footer__button--market">
-         <a class="cmp-button" href="https://maps.app.goo.gl/FJ15zhTXwpipxdT29" target="_blank">
-            <i class="bx bxs-map"></i>
-            <span class="cmp-button__text">Perú</span>
-         </a>
-      </div>
 
-      <hr>
-      <div class="footer-row">
-         <div class="footer__navigation">
-            <div class="cmp-text">
-               <h1>NOSOTROS</h1>
-               <p>Empresa peruana dedicada a la comercialización de insumos agrícolas.</p>
+   <!-- contactos -->
+   <footer class="footer">
+      <div class="container">
+         <h1>PROCAMPO</h1>
+         <div class="footer__button--market">
+            <a class="cmp-button" href="https://maps.app.goo.gl/FJ15zhTXwpipxdT29" target="_blank">
+               <i class="bx bxs-map"></i>
+               <span class="cmp-button__text">Perú</span>
+            </a>
+         </div>
+
+         <hr>
+         <div class="footer-row">
+            <div class="footer__navigation">
+               <div class="cmp-text">
+                  <h1>NOSOTROS</h1>
+                  <p>Empresa peruana dedicada a la comercialización de insumos agrícolas.</p>
+                  <br>
+                  <img src="imagenes/logo1.webp" alt="Logo PROCAMPO">
+               </div>
+            </div>
+            <div class="footer__mobile-accordion">
+               <div class="cmp-text">
+                  <h1> UBICANOS</h1>
+                  <ul>
+                     <li><a href="https://maps.app.goo.gl/5ex8xv6eRP5W7sfR9" target="_blank" style="color: white;">Mapa
+                           del sitio</a></li>
+                     <br>
+                     <br>
+                     <a href="https://maps.app.goo.gl/5ex8xv6eRP5W7sfR9" target="_blank"><img
+                           src="imagenes/peru (1).webp" alt="mapa"></a>
+                  </ul>
+                  <h1>CONTACTOS</h1>
+                  <ul>
+                     <li><i class="fas fa-map-marker-alt"></i> Calle Capitán Salvador Carmona N°216 - Ate – Lima</li>
+                     <li><i class="fas fa-envelope"></i> servicio.cliente@procampo.com.pe</li>
+                     <li><i class="fas fa-phone"></i> (511) 364 7338 - (511) 364 7335 - (511) 364 7333</li>
+                  </ul>
+               </div>
+            </div>
+            <div class="footer__link-list">
+               <div class="cmp-text">
+                  <h1>TÉRMINOS Y CONDICIONES</h1>
+                  <ul>
+                     <li>Términos de uso</li>
+                     <li>Política de Privacidad</li>
+                     <li>Configuración de cookies</li>
+                  </ul>
+               </div>
+            </div>
+            <div class="social-icons">
+               <h1>BUSCANOS</h1>
                <br>
-               <img src="imagenes/logo1.png" alt="Logo PROCAMPO">
+               <ul>
+                  <li><a href="https://web.facebook.com/Procampo.s.a/?_rdc=1&_rdr" target="_blank"><span
+                           class="facebook"><i class="fab fa-facebook-f"></i></span></a></li>
+                  <li><a href="https://www.linkedin.com/in/procampo-s-a-grupo-chiaway/" target="_blank"><span
+                           class="linkedin"><i class="fab fa-linkedin-in"></i></span></a></li>
+                  <li><a href="https://www.youtube.com/channel/UC6Jng8EgHYbxj5CV7JvuW6Q?view_as=subscriber"
+                        target="_blank"><span class="youtube"><i class="fab fa-youtube"></i></span></a></li>
+                  <li><a href="https://www.instagram.com/procampo.peru/" target="_blank"><span class="instagram"><i
+                              class="fab fa-instagram"></i></span></a></li>
+               </ul>
             </div>
          </div>
-         <div class="footer__mobile-accordion">
+         <hr>
+         <div class="text footer__bottom--privacy">
             <div class="cmp-text">
-               <h1> UBICANOS</h1>
-               <ul>
-                  <li><a href="https://maps.app.goo.gl/5ex8xv6eRP5W7sfR9" target="_blank" style="color: white;">Mapa
-                        del sitio</a></li>
-                  <br>
-                  <br>
-                  <a href="https://maps.app.goo.gl/5ex8xv6eRP5W7sfR9" target="_blank"><img src="imagenes/peru (1).png"
-                        alt="mapa"></a>
-               </ul>
-               <h1>CONTACTOS</h1>
-               <ul>
-                  <li><i class="fas fa-map-marker-alt"></i> Calle Capitán Salvador Carmona N°216 - Ate – Lima</li>
-                  <li><i class="fas fa-envelope"></i> servicio.cliente@procampo.com.pe</li>
-                  <li><i class="fas fa-phone"></i> (511) 364 7338 - (511) 364 7335 - (511) 364 7333</li>
-               </ul>
+               <h3>© 2024 Creado por Liliana Martínez Lalangui.</h3>
             </div>
-         </div>
-         <div class="footer__link-list">
-            <div class="cmp-text">
-               <h1>TÉRMINOS Y CONDICIONES</h1>
-               <ul>
-                  <li>Términos de uso</li>
-                  <li>Política de Privacidad</li>
-                  <li>Configuración de cookies</li>
-               </ul>
-            </div>
-         </div>
-         <div class="social-icons">
-            <h1>BUSCANOS</h1>
-            <br>
-            <ul>
-               <li><a href="https://web.facebook.com/Procampo.s.a/?_rdc=1&_rdr" target="_blank"><span
-                        class="facebook"><i class="fab fa-facebook-f"></i></span></a></li>
-               <li><a href="https://www.linkedin.com/in/procampo-s-a-grupo-chiaway/" target="_blank"><span
-                        class="linkedin"><i class="fab fa-linkedin-in"></i></span></a></li>
-               <li><a href="https://www.youtube.com/channel/UC6Jng8EgHYbxj5CV7JvuW6Q?view_as=subscriber"
-                     target="_blank"><span class="youtube"><i class="fab fa-youtube"></i></span></a></li>
-               <li><a href="https://www.instagram.com/procampo.peru/" target="_blank"><span class="instagram"><i
-                           class="fab fa-instagram"></i></span></a></li>
-            </ul>
          </div>
       </div>
-      <hr>
-      <div class="text footer__bottom--privacy">
-         <div class="cmp-text">
-            <h3>© 2024 Creado por Liliana Martínez Lalangui.</h3>
-         </div>
-      </div>
-   </div>
-</footer>
+   </footer>
 
-<script>
-   // Función para mostrar el carrito
-   function mostrarCarrito() {
-       const carritoContenedor = document.querySelector('.carrito');
-       carritoContenedor.style.display = 'block';
-   }
-   
-   // Función para ocultar el carrito
-   function ocultarCarrito() {
-       const carritoContenedor = document.querySelector('.carrito');
-       carritoContenedor.style.display = 'none';
-   }
-   
-   // Función para realizar el pago (simulación)
-   function realizarPago() {
-       alert('Pago realizado con éxito');
-   }
-   
-   let carrito = [];
-   
-   // Función para añadir un producto al carrito
-   function addToCart(name, price, imageSrc) {
-       // Verificar si el producto ya está en el carrito
-       const existingItemIndex = carrito.findIndex(item => item.name === name);
-       if (existingItemIndex !== -1) {
-           // Si el producto ya está en el carrito, aumentar la cantidad
-           carrito[existingItemIndex].quantity++;
-       } else {
-           // Si el producto no está en el carrito, agregarlo
-           const item = {
+   <script>
+      // Función para mostrar el carrito
+      function mostrarCarrito() {
+         const carritoContenedor = document.querySelector('.carrito');
+         carritoContenedor.style.display = 'block';
+      }
+
+      // Función para ocultar el carrito
+      function ocultarCarrito() {
+         const carritoContenedor = document.querySelector('.carrito');
+         carritoContenedor.style.display = 'none';
+      }
+
+      // Función para realizar el pago (simulación)
+      function realizarPago() {
+         alert('Pago realizado con éxito');
+      }
+
+      let carrito = [];
+
+      // Función para añadir un producto al carrito
+      function addToCart(name, price, imageSrc) {
+         // Verificar si el producto ya está en el carrito
+         const existingItemIndex = carrito.findIndex(item => item.name === name);
+         if (existingItemIndex !== -1) {
+            // Si el producto ya está en el carrito, aumentar la cantidad
+            carrito[existingItemIndex].quantity++;
+         } else {
+            // Si el producto no está en el carrito, agregarlo
+            const item = {
                name: name,
                price: price,
                quantity: 1,
                imageSrc: imageSrc
-           };
-           carrito.push(item);
-       }
-       updateCart();
-   }
-   
-   // Función para actualizar el carrito en la interfaz
-   function updateCart() {
-       const cartCount = document.getElementById('cart-count');
-       const listaCarrito = document.getElementById('lista-carrito');
-       const totalElement = document.getElementById('total');
-   
-       // Reiniciar el contenido del carrito
-       listaCarrito.innerHTML = '';
-   
-       // Mostrar la cantidad de productos en el carrito
-       let totalQuantity = 0;
-       carrito.forEach(item => {
-           totalQuantity += item.quantity;
-       });
-       cartCount.textContent = totalQuantity;
-   
-       // Calcular el total
-       let total = 0;
-       carrito.forEach(item => {
-           total += item.price * item.quantity;
-           const itemElement = document.createElement('div');
-           itemElement.classList.add('item-carrito');
-           itemElement.innerHTML = `
+            };
+            carrito.push(item);
+         }
+         updateCart();
+      }
+
+      // Función para actualizar el carrito en la interfaz
+      function updateCart() {
+         const cartCount = document.getElementById('cart-count');
+         const listaCarrito = document.getElementById('lista-carrito');
+         const totalElement = document.getElementById('total');
+
+         // Reiniciar el contenido del carrito
+         listaCarrito.innerHTML = '';
+
+         // Mostrar la cantidad de productos en el carrito
+         let totalQuantity = 0;
+         carrito.forEach(item => {
+            totalQuantity += item.quantity;
+         });
+         cartCount.textContent = totalQuantity;
+
+         // Calcular el total
+         let total = 0;
+         carrito.forEach(item => {
+            total += item.price * item.quantity;
+            const itemElement = document.createElement('div');
+            itemElement.classList.add('item-carrito');
+            itemElement.innerHTML = `
                <img src="${item.imageSrc}" alt="${item.name}">
                <div class="info-producto">
-                   <h4>${item.name}</h4>
-                   <p>Precio: $${item.price}</p>
+                  <h4>${item.name}</h4>
+                  <p>Precio: $${item.price}</p>
                </div>
                <div class="acciones-producto">
-                   <div class="cantidad">
-                       <button onclick="decreaseQuantity(this, '${item.name}')">-</button>
-                       <input type="text" value="${item.quantity}" id="quantity-${item.name}" readonly>
-                       <button onclick="increaseQuantity(this, '${item.name}')">+</button>
-                   </div>
-                   <i class="fas fa-trash eliminar" onclick="removeFromCart('${item.name}')"></i>
+                  <div class="cantidad">
+                     <button onclick="decreaseQuantity(this, '${item.name}')">-</button>
+                     <input type="text" value="${item.quantity}" id="quantity-${item.name}" readonly>
+                     <button onclick="increaseQuantity(this, '${item.name}')">+</button>
+                  </div>
+                  <i class="fas fa-trash eliminar" onclick="removeFromCart('${item.name}')"></i>
                </div>
-           `;
-           listaCarrito.appendChild(itemElement);
-       });
-   
-       // Mostrar el total
-       totalElement.textContent = total.toFixed(2);
-   }
-   
-   // Función para aumentar la cantidad de un producto en el carrito
-   function increaseQuantity(button, name) {
-       const input = button.previousElementSibling;
-       let quantity = parseInt(input.value);
-       if (isNaN(quantity)) {
-           quantity = 1;
-       }
-       input.value = quantity + 1;
-       updateCartItemQuantity(name, quantity + 1);
-   }
-   
-   // Función para disminuir la cantidad de un producto en el carrito
-   function decreaseQuantity(button, name) {
-       const input = button.nextElementSibling;
-       const quantity = parseInt(input.value);
-       if (quantity > 1) {
-           input.value = quantity - 1;
-           updateCartItemQuantity(name, quantity - 1);
-       }
-   }
-   
-   // Función para actualizar la cantidad de un producto en el carrito
-   function updateCartItemQuantity(name, quantity) {
-       const itemIndex = carrito.findIndex(item => item.name === name);
-       if (itemIndex !== -1) {
-           carrito[itemIndex].quantity = quantity;
-           updateCart();
-       }
-   }
-   
-   // Función para eliminar un producto del carrito
-   function removeFromCart(name) {
-       carrito = carrito.filter(item => item.name !== name);
-       updateCart();
-   }
-   
-   // Función para activar la categoría seleccionada
-   function setActive(button, category) {
-       const buttons = document.querySelectorAll('.filter_buttons button');
-       buttons.forEach(btn => btn.classList.remove('active'));
-       button.classList.add('active');
-   
-       // Mostrar productos de la categoría seleccionada
-       const containers = document.querySelectorAll('.container');
-       containers.forEach(container => {
-           container.style.display = 'none';
-       });
-       const selectedContainer = document.querySelector(`.${category}`);
-       selectedContainer.style.display = 'block';
-   }
-   
-   // Añadir eventos a los botones de "Añadir al carrito"
-   document.querySelectorAll('.cart').forEach(btn => {
-       btn.addEventListener('click', e => {
-           const product = e.target.parentElement.parentElement;
-           const name = product.querySelector('h3').textContent;
-           const price = parseFloat(product.querySelector('.price').textContent.substring(1));
-           const imageSrc = product.querySelector('img').src;
-           addToCart(name, price, imageSrc);
-       });
-   });
-   
-   // Añadir eventos a los botones de categoría
-   document.querySelectorAll('.filter_buttons button').forEach(button => {
-       button.addEventListener('click', () => {
-           setActive(button, button.dataset.category);
-       });
-   });
+         `;
+            listaCarrito.appendChild(itemElement);
+         });
+
+         // Mostrar el total
+         totalElement.textContent = total.toFixed(2);
+      }
+
+      // Función para aumentar la cantidad de un producto en el carrito
+      function increaseQuantity(button, name) {
+         const input = button.previousElementSibling;
+         let quantity = parseInt(input.value);
+         if (isNaN(quantity)) {
+            quantity = 1;
+         }
+         input.value = quantity + 1;
+         updateCartItemQuantity(name, quantity + 1);
+      }
+
+      // Función para disminuir la cantidad de un producto en el carrito
+      function decreaseQuantity(button, name) {
+         const input = button.nextElementSibling;
+         const quantity = parseInt(input.value);
+         if (quantity > 1) {
+            input.value = quantity - 1;
+            updateCartItemQuantity(name, quantity - 1);
+         }
+      }
+
+      // Función para actualizar la cantidad de un producto en el carrito
+      function updateCartItemQuantity(name, quantity) {
+         const itemIndex = carrito.findIndex(item => item.name === name);
+         if (itemIndex !== -1) {
+            carrito[itemIndex].quantity = quantity;
+            updateCart();
+         }
+      }
+
+      // Función para eliminar un producto del carrito
+      function removeFromCart(name) {
+         carrito = carrito.filter(item => item.name !== name);
+         updateCart();
+      }
+
+      // Función para activar la categoría seleccionada
+      function setActive(button, category) {
+         const buttons = document.querySelectorAll('.filter_buttons button');
+         buttons.forEach(btn => btn.classList.remove('active'));
+         button.classList.add('active');
+
+         // Mostrar productos de la categoría seleccionada
+         const containers = document.querySelectorAll('.container');
+         containers.forEach(container => {
+            container.style.display = 'none';
+         });
+         const selectedContainer = document.querySelector(`.${category}`);
+         selectedContainer.style.display = 'block';
+      }
+
+      // Añadir eventos a los botones de "Añadir al carrito"
+      document.querySelectorAll('.cart').forEach(btn => {
+         btn.addEventListener('click', e => {
+            const product = e.target.parentElement.parentElement;
+            const name = product.querySelector('h3').textContent;
+            const price = parseFloat(product.querySelector('.price').textContent.substring(1));
+            const imageSrc = product.querySelector('img').src;
+            addToCart(name, price, imageSrc);
+         });
+      });
+
+      // Añadir eventos a los botones de categoría
+      document.querySelectorAll('.filter_buttons button').forEach(button => {
+         button.addEventListener('click', () => {
+            setActive(button, button.dataset.category);
+         });
+      });
    </script>
-   
 
 
 
 
-<script src="scriptProductos.js"></script>
+
+   <script src="scriptProductos.js"></script>
 
 </body>
 
