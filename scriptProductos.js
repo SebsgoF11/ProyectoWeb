@@ -164,71 +164,71 @@ function setActiveCategory(button, targetContainer) {
   // Obtener todos los botones
   var buttons = document.querySelectorAll('.filter-buttons button');
 
-// Obtener todos los botones
-var buttons = document.querySelectorAll('.filter_buttons button');
+  // Obtener todos los botones
+  var buttons = document.querySelectorAll('.filter_buttons button');
 
   // Remover la clase 'active' de todos los botones
-  buttons.forEach(function(btn) {
+  buttons.forEach(function (btn) {
     btn.classList.remove('active');
-});
+  });
 
-// Agregar la clase 'active' al botón seleccionado
-button.classList.add('active');
+  // Agregar la clase 'active' al botón seleccionado
+  button.classList.add('active');
 
-// Mostrar solo el contenedor correspondiente a la categoría seleccionada
-var containers = document.querySelectorAll('.container, .container_2, .container_3,.container_4,.container_5,.container_6');
-containers.forEach(function(container) {
- container.style.display = 'none';
-});
+  // Mostrar solo el contenedor correspondiente a la categoría seleccionada
+  var containers = document.querySelectorAll('.container, .container_2, .container_3,.container_4,.container_5,.container_6');
+  containers.forEach(function (container) {
+    container.style.display = 'none';
+  });
 
-if (targetContainer === 'all') {
- containers.forEach(function(container) {
-   container.style.display = 'block';
- });
-} else {
- document.querySelector('.' + targetContainer).style.display = 'block';
-}
+  if (targetContainer === 'all') {
+    containers.forEach(function (container) {
+      container.style.display = 'block';
+    });
+  } else {
+    document.querySelector('.' + targetContainer).style.display = 'block';
+  }
 }
 
 // Código para la flecha de desplazamiento
-document.getElementById('arrow').addEventListener('click', function(event) {
+document.getElementById('arrow').addEventListener('click', function (event) {
   event.preventDefault();
 
-// Remover la clase 'active' de todos los botones
-buttons.forEach(function(btn) {
- btn.classList.remove('active');
-});
+  // Remover la clase 'active' de todos los botones
+  buttons.forEach(function (btn) {
+    btn.classList.remove('active');
+  });
 
-// Agregar la clase 'active' al botón seleccionado
-button.classList.add('active');
+  // Agregar la clase 'active' al botón seleccionado
+  button.classList.add('active');
 
-// Mostrar solo el contenedor correspondiente a la categoría seleccionada
-var containers = document.querySelectorAll('.container, .container_2, .container_3,.container_4,.container_5,.container_6');
-containers.forEach(function(container) {
- container.style.display = 'none';
-});
+  // Mostrar solo el contenedor correspondiente a la categoría seleccionada
+  var containers = document.querySelectorAll('.container, .container_2, .container_3,.container_4,.container_5,.container_6');
+  containers.forEach(function (container) {
+    container.style.display = 'none';
+  });
 
-if (targetContainer === 'all') {
- containers.forEach(function(container) {
-   container.style.display = 'block';
- });
-} else {
- document.querySelector('.' + targetContainer).style.display = 'block';
+  if (targetContainer === 'all') {
+    containers.forEach(function (container) {
+      container.style.display = 'block';
+    });
+  } else {
+    document.querySelector('.' + targetContainer).style.display = 'block';
+  }
 }
-}
 
-/*   flecha      */
-, document.getElementById('arrow').addEventListener('click', function (event) {
-  event.preventDefault();  // Prevent the default anchor behavior
+  /*   flecha      */
+  , document.getElementById('arrow').addEventListener('click', function (event) {
+    event.preventDefault();  // Prevent the default anchor behavior
 
-  // Get the target element
-  const target = document.getElementById('trending');
-  const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
-  window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-})
+    // Get the target element
+    const target = document.getElementById('trending');
+    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+  })
 
   // Animate the arrow's movement to the target position
-,  window.scrollTo({
+  , window.scrollTo({
     top: targetPosition,
     behavior: 'smooth'
   }));
@@ -239,7 +239,7 @@ if (targetContainer === 'all') {
 /* BARRA DE BUSQUEDAAA */
 
 let products = {
-  data:[
+  data: [
     {
       productName: "AMINOTERRA GREEN X 20 LT",
       category: "Agroquimicos",
