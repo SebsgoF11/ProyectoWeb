@@ -1,17 +1,81 @@
-// guardado de los datos del carrito en localStorage
-localStorage.setItem('cartItems', JSON.stringify(cartItems));
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
+import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js';
+import { getFirestore, collection, addDoc } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js';
 
-// Redireccionar a la siguiente página
-window.location.href = 'Index_Boleta.html';
-// Recuperar los datos del carrito desde localStorage
-let cartItems = JSON.parse(localStorage.getItem('cartItems'));
+// Configuración de Firebase
+const firebaseConfig = {
+    apiKey: "AIzaSyC9-0wfVwduQSZW0LnytRLqzcZiUcFiYe4",
+    authDomain: "procampoweb-3bf5a.firebaseapp.com",
+    projectId: "procampoweb-3bf5a",
+    storageBucket: "procampoweb-3bf5a.appspot.com",
+    messagingSenderId: "163347514345",
+    appId: "1:163347514345:web:50825a06872e8bd2fa8178",
+};
 
-// Verificar si hay datos en el carrito
-if (cartItems) {
-    // Aquí puedes trabajar con los datos del carrito recuperados
-    console.log(cartItems);
-} else {
-    // Manejar el caso donde no hay datos en el carrito
-    console.log('El carrito está vacío.');
+// Inicializa Firebase
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+// Referencia a la colección de Firestore
+const carritoRef = db.collection('carrito');
+
+function mostrarDatosCarrito() {
+    const listaCarrito = document.getElementById('lista-carrito');
+
+    // Limpiar contenido previo
+    listaCarrito.innerHTML = '';
+
+    // Obtener datos del carrito desde Firebase
+    carritoRef.get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            const item = doc.data();
+            const itemElement = document.createElement('div');
+            itemElement.classList.add('item-carrito');
+            itemElement.innerHTML = `
+                <img src="${item.imageSrc}" alt="${item.name}">
+                <div class="info-producto">
+                    <h4>${item.name}</h4>
+                    <p>Precio: $${item.price}</p>
+                    <p>Cantidad: ${item.quantity}</p>
+                </div>
+            `;
+            listaCarrito.appendChild(itemElement);
+        });
+    }).catch((error) => {
+        console.log("Error al obtener datos del carrito: ", error);
+    });
 }
 
+document.addEventListener('DOMContentLoaded', mostrarDatosCarrito);
+
+
+// Función para obtener y mostrar los datos del carrito en "Boleta.html"
+function mostrarDatosCarrito() {
+    const listaCarrito = document.getElementById('lista-carrito');
+
+    // Limpiar contenido previo
+    listaCarrito.innerHTML = '';
+
+    // Obtener datos del carrito desde Firebase
+    carritoRef.get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            const item = doc.data();
+            const itemElement = document.createElement('div');
+            itemElement.classList.add('item-carrito');
+            itemElement.innerHTML = `
+                <img src="${item.imageSrc}" alt="${item.name}">
+                <div class="info-producto">
+                    <h4>${item.name}</h4>
+                    <p>Precio: $${item.price}</p>
+                    <p>Cantidad: ${item.quantity}</p>
+                </div>
+            `;
+            listaCarrito.appendChild(itemElement);
+        });
+    }).catch((error) => {
+        console.log("Error al obtener datos del carrito: ", error);
+    });
+}
+
+// Llama a la función para mostrar los datos del carrito cuando la página se cargue
+document.addEventListener('DOMContentLoaded', mostrarDatosCarrito);

@@ -269,3 +269,46 @@
         });
     }
 
+    function realizarPago() {
+        // Guardar los datos del carrito en Firebase antes de redireccionar
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        if (cartItems.length > 0) {
+            const batch = db.batch();
+            cartItems.forEach(item => {
+                const docRef = db.collection('carrito').doc();
+                batch.set(docRef, item);
+            });
+            batch.commit().then(() => {
+                console.log("Datos del carrito subidos a Firebase");
+                window.location.href = 'Index_Boleta.html';
+            }).catch((error) => {
+                console.error("Error al subir los datos del carrito a Firebase: ", error);
+            });
+        } else {
+            console.log('El carrito está vacío.');
+            window.location.href = 'Index_Boleta.html';
+        }
+    }
+
+    function uploadCart() {
+        if (carrito.length > 0) {
+            const batch = db.batch();
+            carrito.forEach(item => {
+                const docRef = db.collection('carrito').doc();
+                batch.set(docRef, item);
+            });
+            batch.commit().then(() => {
+                console.log("Carrito subido a Firebase correctamente");
+                // Aquí puedes redirigir a la página de pago o realizar alguna acción adicional
+                window.location.href = 'Index_Boleta.html';
+            }).catch((error) => {
+                console.error("Error al subir el carrito a Firebase: ", error);
+            });
+        } else {
+            console.log('El carrito está vacío.');
+            // Aquí puedes manejar el caso de un carrito vacío, si es necesario
+        }
+    }
+
+
+

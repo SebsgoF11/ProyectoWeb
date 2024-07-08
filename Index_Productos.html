@@ -23,8 +23,12 @@
 
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="styleBoleta.css">
+
    <link href="https://fonts.googleapis.com/css?family=Jost:wght@100;200;300;400;500;600;700&display=swap"
       rel="stylesheet">
+
+   
 </head>
 
 <body>
@@ -62,7 +66,7 @@
          <h3>Tu Carrito</h3>
          <div class="lista-carrito" id="lista-carrito"></div>
          <h2>Tu Total: $<strong class="price-total" id="total">0.00</strong></h2>
-         <button class="pagar-btn" onclick="realizarPago()">Pagar</button>
+         <button class="pagar-btn" onclick="uploadCart()"https>Pagar</button>
 
       </div>
       <div class="capa"></div>
@@ -1288,6 +1292,9 @@
    </footer>
 
    <script>
+
+      
+      
       // Función para mostrar el carrito
       function mostrarCarrito() {
          const carritoContenedor = document.querySelector('.carrito');
@@ -1440,6 +1447,16 @@
          });
       });
    </script>
+<script>
+   function ocultarCarrito() {
+       document.getElementById('carrito').style.display = 'none';
+   }
+
+   function realizarPago() {
+       window.location.href = 'Index_Boleta.html';
+   }
+</script>
+
 
 
 

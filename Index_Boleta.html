@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrito de Compras</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boleta de Compra</title>
+    <link rel="stylesheet" href="styleBoleta.css"> <!-- Agrega tu hoja de estilos si es necesario -->
 </head>
 <body>
-  <header>
-    <h1>Carrito de Compras</h1>
-  </header>
-  
-  <main>
-    <div id="cart-items">
-      <!-- Aquí se mostrarán los elementos del carrito -->
-    </div>
-    
-    <button id="checkout-btn">Ir al Checkout</button>
-  </main>
-  
-  <script src="script.js"></script>
+    <header>
+        <!-- Tu encabezado aquí -->
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Detalle de la Boleta</h1>
+            <div id="lista-carrito" class="lista-carrito">
+                <!-- Aquí se mostrarán los productos del carrito -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Tu pie de página aquí -->
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="firebase-config.js"></script> <!-- Asegúrate de que la configuración esté aquí -->
+
 </body>
 </html>
