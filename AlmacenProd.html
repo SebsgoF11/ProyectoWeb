@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creador de Productos</title>
+</head>
+
+<body>
+    <script type="module" src="AlmacenProd.js"></script>
+    <div class="container">
+        <h3><center>Registro de Producto</center></h3>
+        <form id="Prod_Create" action="" method="post">
+            <div class="row">
+                <label for="Nombre">Nombre del producto</label>
+                <input type="text" id="Prod_Name" name="Nombre del Producto" required>
+            </div>
+
+            <div class="row">
+                <label for="Descripcion">Descripción</label>
+                <input type="text" id="Desc" name="Descripcion del Producto" required>
+            </div>
+
+            <div class="row">
+                <label for="imagen">Imagen del Producto</label>
+                <input type="file" id="Prod_img" required>
+            </div>
+
+            <div>
+                <label for="Precio">Precio del Producto</label>
+                <input type="number" id="Price" name="Precio del Producto" required>
+            </div>
+
+            <div>
+                <label for="Categoria">Categoria del Producto</label>
+                <input type="text" id="Categoria" name="Categoria del Producto" required>
+            </div>
+
+            <button type="button" onclick="uploadProduct()">Registrar Producto</button>
+        </form>
+        <div>
+            <progress id="uploadProgress" value="0" max="100"></progress>
+            <br/>
+            <img id="uploadedImage" width="320" alt=""/>
+        </div>
+    </div>
+</body>
+
+</html>
