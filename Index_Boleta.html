@@ -7,23 +7,27 @@
     <link rel="stylesheet" href="styleBoleta.css"> <!-- Agrega tu hoja de estilos si es necesario -->
 </head>
 <body>
-    <header>
-        <!-- Tu encabezado aquí -->
-    </header>
-
-    <main>
-        <div class="container">
-            <h1>Detalle de la Boleta</h1>
-            <div id="lista-carrito" class="lista-carrito">
-                <!-- Aquí se mostrarán los productos del carrito -->
+    <section>
+        <form>
+            <h1>Inicio</h1>
+            <div class="inputbox">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="text" required>
+                <label for="">Boleta</label>
             </div>
-        </div>
-    </main>
-
-    <footer>
-        <!-- Tu pie de página aquí -->
-    </footer>
-
+            <div class="inputbox">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="text" required>
+                <label for="">N° Boleta</label>
+            </div>
+            <div class="forget">
+                <label for=""><input type="checkbox">Recordar</label>
+                <a href="#">Olvidé la Contraseña</a>
+            </div>
+            <input type="submit" id="btnGrabar"><i class="fas fa-save"></i> Buscar</button>
+        </form>
+    </section>
+    <script src="scriptBoleta.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
     <script src="firebase-config.js"></script> <!-- Asegúrate de que la configuración esté aquí -->
